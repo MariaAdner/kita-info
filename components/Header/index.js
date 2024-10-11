@@ -1,9 +1,12 @@
+import { StyledHeader } from "./Header.styled";
+import { StyledText } from "./Header.styled";
+
 export default function Header() {
   return (
     <>
       <div>
-        <h1>Kita Sternschnuppe</h1>
-        <h3>Informationen für Eltern</h3>
+        <StyledHeader>Kita Sternschnuppe</StyledHeader>
+        <StyledText>Informationen für Eltern</StyledText>
       </div>
     </>
   );
