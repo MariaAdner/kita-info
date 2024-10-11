@@ -17,7 +17,7 @@ export default function NewsItem() {
 
   return (
     <>
-      <h2>{data.title}</h2>
+      <h4>{data.title}</h4>
       <p>{data.date}</p>
       <p> {data.text}</p>
     </>

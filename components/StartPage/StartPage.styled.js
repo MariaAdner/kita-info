@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 export const Menu = styled.ul`
   display: flex;
@@ -22,4 +23,8 @@ export const MenuLink = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
 `;

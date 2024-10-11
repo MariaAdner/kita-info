@@ -1,21 +1,33 @@
 import styled from "styled-components";
 import Link from "next/link";
 
+export const StyledList = styled.ul`
+  list-style: none;
+`;
+
 export const NewsLink = styled(Link)`
   width: 300px;
-  height: 50px;
-  border: 2px, solid, darkblue;
-  border-radius: 10px;
+  height: 100px;
+  border-radius: 5px;
   margin: 10px;
   list-style: none;
   padding: 25px;
   text-align: center;
-  background-color: lightblue;
+  background-color: var(--color-background);
   color: darkblue;
-  font-weight: bold;
-  font-size: larger;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  box-shadow: 0px 1px 5px -2px var(--color-granite);
+  align-items: flex-start;
+  text-decoration: none;
+`;
+
+export const StyledDate = styled.div`
+  text-decoration: underline;
+  padding: 5px;
+`;
+
+export const StyledTitle = styled.div`
+  font-weight: bold;
+  padding: 10px;
 `;
