@@ -2,10 +2,10 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
 :root {
-  --color-main: #3399ff;
+  --color-main: #2d89ef;
   --color-text: #4d4d4d;
-  --color-background: #99e6ff;
-  --color-headline: #006080;
+  --color-background: #eff4ff;
+  --color-headline: #2b5797;
 }
   *,
   *::before,

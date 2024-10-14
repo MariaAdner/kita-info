@@ -1,10 +1,13 @@
 import NewsList from "@/components/NewsList";
+import Header from "@/components/Header";
+import SubHeader from "@/components/SubHeader";
 
 export default function Neuigkeiten() {
   return (
     <>
+      <Header />
       <div>
-        <h2>Neuigkeiten</h2>
+        <SubHeader>Neuigkeiten</SubHeader>
         <NewsList />
       </div>
     </>

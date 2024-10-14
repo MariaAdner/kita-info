@@ -23,6 +23,9 @@ export const MenuLink = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const StyledLink = styled(Link)`
