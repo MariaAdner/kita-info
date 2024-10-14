@@ -14,7 +14,7 @@ export default createGlobalStyle`
   }
 
   body {
-    margin: 0;
+    margin: 40px;
     font-family: system-ui;
   }
 `;

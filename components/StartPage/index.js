@@ -12,7 +12,7 @@ export default function StartPage() {
       <StyledLink href="/termine">
         <MenuLink>Termine</MenuLink>
       </StyledLink>
-      <StyledLink href="/about">
+      <StyledLink href="/aboutus">
         <MenuLink>Über uns</MenuLink>
       </StyledLink>
       <StyledLink href="/essen">
