@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.h1`
   text-align: center;
-  color: var(--color-main);
+  color: var(--color-headline);
 `;
 
 export const StyledText = styled.p`
