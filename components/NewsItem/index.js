@@ -1,7 +1,7 @@
 import useSWR from "swr";
 import { useRouter } from "next/router";
 import Header from "../Header";
-import { StyledTitle } from "./NewsItem.styled";
+import { StyledDate, StyledTitle, StyledText } from "./NewsItem.styled";
 import { StyledNewsItem } from "./NewsItem.styled";
 import BackButton from "../BackButton";
 import Link from "next/link";
@@ -28,8 +28,11 @@ export default function NewsItem() {
       </Link>
       <StyledNewsItem>
         <StyledTitle>{data.title}</StyledTitle>
-        <p>{data.date}</p>
-        <p> {data.text}</p>
+
+        <StyledText
+          dangerouslySetInnerHTML={{ __html: data.text }}
+        ></StyledText>
+        <StyledDate>{data.date}</StyledDate>
       </StyledNewsItem>
     </>
   );
