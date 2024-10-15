@@ -18,12 +18,7 @@ export default function Kontakt() {
           <p>Telefon: 037754 2855</p>
           <p>E-Mail: kita.sternschnuppe@zwoenitz.de</p>
         </div>
-        <form
-          action="SENDEADRESSE"
-          id="ft-form"
-          method="POST"
-          accept-charset="UTF-8"
-        >
+        <form>
           <fieldset>
             <label>
               Name
@@ -51,6 +46,9 @@ export default function Kontakt() {
             </div>
           </fieldset>
         </form>
+        <h4>Öffnungszeiten</h4>
+        <p>Montag - Freitag:</p>
+        <p>6 - 17 Uhr</p>
       </>
     </>
   );
