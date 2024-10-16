@@ -2,11 +2,13 @@ import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
 import { StyledColumn, StyledTable } from "./termine.styled";
 import EventsList from "@/components/EventsList";
+import HomeButton from "@/components/HomeButton";
 
 export default function Dates() {
   return (
     <>
       <Header />
+      <HomeButton />
       <SubHeader>Termine</SubHeader>
       <h4>Schließzeiten</h4>
       <StyledTable>
