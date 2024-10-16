@@ -7,7 +7,7 @@ export const StyledList = styled.ul`
 
 export const NewsLink = styled(Link)`
   width: 300px;
-  height: 100px;
+  height: 50px;
   border-radius: 5px;
   margin: 10px;
   list-style: none;
@@ -18,7 +18,6 @@ export const NewsLink = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
   text-decoration: none;
 `;
 
@@ -29,5 +28,4 @@ export const StyledDate = styled.div`
 
 export const StyledTitle = styled.div`
   font-weight: bold;
-  padding: 10px;
 `;

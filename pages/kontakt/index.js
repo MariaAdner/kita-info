@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HomeButton from "@/components/HomeButton";
 import SubHeader from "@/components/SubHeader";
+import { StyledArticle } from "./kontakt.styled";
 
 export default function Kontakt() {
   return (
@@ -8,7 +9,7 @@ export default function Kontakt() {
       <Header />
       <HomeButton />
       <SubHeader>Kontakt</SubHeader>
-      <>
+      <StyledArticle>
         <div>
           <p>Haus-Leitung: Lydia Pech</p>
           <p>Stellvertretung: Christiane Günther</p>
@@ -49,7 +50,7 @@ export default function Kontakt() {
         <h4>Öffnungszeiten</h4>
         <p>Montag - Freitag:</p>
         <p>6 - 17 Uhr</p>
-      </>
+      </StyledArticle>
     </>
   );
 }
