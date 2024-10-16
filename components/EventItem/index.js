@@ -1,8 +1,12 @@
 import useSWR from "swr";
 import { useRouter } from "next/router";
 import Header from "../Header";
-import { StyledDate, StyledTitle, StyledText } from "./NewsItem.styled";
-import { StyledNewsItem } from "./NewsItem.styled";
+import {
+  StyledEventItem,
+  StyledTitle,
+  StyledDate,
+  StyledDescription,
+} from "./EventItem.styled";
 import BackButton from "../BackButton";
 import Link from "next/link";
 
@@ -10,7 +14,7 @@ export default function NewsItem() {
   const router = useRouter();
   const { id } = router.query;
 
-  const { data, isLoading } = useSWR(`/api/news/${id}`);
+  const { data, isLoading } = useSWR(`/api/events/${id}`);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -23,16 +27,16 @@ export default function NewsItem() {
   return (
     <>
       <Header />
-      <Link href="/neuigkeiten">
+      <Link href="/termine">
         <BackButton></BackButton>
       </Link>
-      <StyledNewsItem>
+      <StyledEventItem>
         <StyledTitle>{data.title}</StyledTitle>
-        <StyledText
-          dangerouslySetInnerHTML={{ __html: data.text }}
-        ></StyledText>
+        <StyledDescription
+          dangerouslySetInnerHTML={{ __html: data.description }}
+        ></StyledDescription>
         <StyledDate>{data.date}</StyledDate>
-      </StyledNewsItem>
+      </StyledEventItem>
     </>
   );
 }
