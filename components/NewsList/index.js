@@ -1,5 +1,4 @@
 import useSWR from "swr";
-import Link from "next/link";
 import { NewsLink, StyledDate, StyledTitle } from "./NewsList.styled";
 import { StyledList } from "./NewsList.styled";
 
