@@ -1,16 +1,21 @@
 import { StyledForm, StyledLabel } from "./ContactForm.styled";
-import { mutate } from "swr";
+import useSWR from "swr";
 
 export default function ContactForm() {
+  const { mutate } = useSWR("/api/message");
+
   async function handleSubmit(event) {
     event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const messageData = Object.fromEntries(formData);
 
     const response = await fetch("/api/message", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(Object.fromEntries(new FormData(event.target))),
+      body: JSON.stringify(messageData),
     });
 
     if (response.ok) {
