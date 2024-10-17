@@ -1,8 +1,13 @@
 import Header from "@/components/Header";
 import HomeButton from "@/components/HomeButton";
 import SubHeader from "@/components/SubHeader";
-import { StyledArticle } from "./kontakt.styled";
 import ContactForm from "@/components/ContactForm";
+import styled from "styled-components";
+
+const StyledArticle = styled.article`
+  background-color: var(--color-background);
+  padding: 20px;
+`;
 
 export default function Kontakt() {
   return (

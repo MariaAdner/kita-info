@@ -1,8 +1,20 @@
 import Header from "@/components/Header";
 import HomeButton from "@/components/HomeButton";
 import SubHeader from "@/components/SubHeader";
-import { StyledArticle, StyledSubHeadline } from "./aboutus.styled";
+import styled from "styled-components";
 import ImageGallery from "@/components/ImageGallery";
+
+const StyledArticle = styled.article`
+  line-height: 125%;
+  background-color: var(--color-background-text);
+  padding: 40px;
+  margin: 50px;
+`;
+
+const StyledSubHeadline = styled.h3`
+  margin: 50px;
+  color: var(--color-headline);
+`;
 
 export default function AboutUs() {
   return (
