@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HomeButton from "@/components/HomeButton";
 import SubHeader from "@/components/SubHeader";
 import { StyledArticle, StyledSubHeadline } from "./aboutus.styled";
+import ImageGallery from "@/components/ImageGallery";
 
 export default function AboutUs() {
   return (
@@ -20,6 +21,7 @@ export default function AboutUs() {
         und Kindergarten/Hort. Es gibt eine große Sandlandschaft........
       </StyledArticle>
       <StyledSubHeadline>Bildergalerie</StyledSubHeadline>
+      <ImageGallery />
     </>
   );
 }
