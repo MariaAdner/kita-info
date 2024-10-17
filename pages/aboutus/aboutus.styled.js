@@ -4,6 +4,7 @@ export const StyledArticle = styled.article`
   line-height: 125%;
   background-color: var(--color-background-text);
   padding: 40px;
+  margin: 50px;
 `;
 
 export const StyledSubHeadline = styled.h3`
