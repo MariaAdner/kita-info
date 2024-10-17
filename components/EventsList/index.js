@@ -1,6 +1,10 @@
 import useSWR from "swr";
-import { NewsLink, StyledDate, StyledTitle } from "../NewsList/NewsList.styled";
-import { StyledList } from "../NewsList/NewsList.styled";
+import {
+  StyledList,
+  EventsLink,
+  StyledDate,
+  StyledTitle,
+} from "./EventsList.styled";
 
 export default function EventsList() {
   const { data: events, isLoading } = useSWR("/api/events");
@@ -17,10 +21,10 @@ export default function EventsList() {
     <StyledList>
       {events.map(({ _id, title, date }) => (
         <li key={_id}>
-          <NewsLink href={`/termine/${_id}`}>
+          <EventsLink href={`/termine/${_id}`}>
             <StyledDate> {date}:</StyledDate>
             <StyledTitle>{title}</StyledTitle>
-          </NewsLink>
+          </EventsLink>
         </li>
       ))}
     </StyledList>

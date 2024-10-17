@@ -1,4 +1,4 @@
-import Event from "@/db/models/New";
+import Event from "@/db/models/Event";
 import dbConnect from "@/db/connect";
 
 export default async function handler(request, response) {
