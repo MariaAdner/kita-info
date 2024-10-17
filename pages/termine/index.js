@@ -1,6 +1,9 @@
 import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
-import { StyledColumn, StyledTable } from "./termine.styled";
+import {
+  StyledColumn,
+  StyledTable,
+} from "../../components/Schließzeiten/termine.styled";
 import EventsList from "@/components/EventsList";
 import HomeButton from "@/components/HomeButton";
 
