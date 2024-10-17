@@ -2,7 +2,7 @@
   "name": "kita-info",
   "version": "0.0.0-unreleased",
   "private": true,
- "engines": {"node": "18.x"}
+ "engines": {"node": "18.x"},
  
  
   "scripts": {
