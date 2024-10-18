@@ -7,7 +7,6 @@ import Image from "next/image";
 export default function Essen() {
   return (
     <>
-      <Header />
       <SubHeader>Essen</SubHeader>
       <Image
         src="/Essen.png"

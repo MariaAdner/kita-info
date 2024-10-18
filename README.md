@@ -2,7 +2,7 @@
 
 ### Description
 
-Web Application for the Kindergarten Sternschnuppe: Parents can get
+Web Application for the Kindergarten Sternschnuppe: Parents can get informations about
 
 ### Local Development
 

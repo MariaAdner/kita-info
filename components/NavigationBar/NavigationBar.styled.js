@@ -16,6 +16,9 @@ export const StyledNavigation = styled.div`
 export const StyledNavigationLink = styled(Link)`
   padding: 12px;
   font-size: 17px;
+  :hover {
+    background-color: var(--color-background-item);
+  }
 `;
 
 export const StyledNavigationButton = styled.button`

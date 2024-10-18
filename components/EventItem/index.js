@@ -26,7 +26,6 @@ export default function NewsItem() {
 
   return (
     <>
-      <Header />
       <Link href="/termine">
         <BackButton></BackButton>
       </Link>

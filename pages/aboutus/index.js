@@ -20,7 +20,6 @@ const StyledSubHeadline = styled.h3`
 export default function AboutUs() {
   return (
     <>
-      <Header />
       <SubHeader>Über uns</SubHeader>
       <StyledArticle>
         Die Kita Sternschnuppe befindet sich im Zwönitzer Ortsteil Dorfchemnitz.

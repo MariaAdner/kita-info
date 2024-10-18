@@ -7,7 +7,6 @@ import NavigationBar from "@/components/NavigationBar";
 export default function Dates() {
   return (
     <>
-      <Header />
       <SubHeader>Termine</SubHeader>
       <h4>Schließzeiten</h4>
       <Schließzeiten />

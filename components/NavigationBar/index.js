@@ -3,8 +3,11 @@ import {
   StyledNavigationLink,
   StyledNavigationButton,
 } from "./NavigationBar.styled";
+import { useRouter } from "next/router";
 
 export default function NavigationBar() {
+  const router = useRouter();
+
   return (
     <StyledNavigation>
       <StyledNavigationLink href="/">
@@ -22,7 +25,7 @@ export default function NavigationBar() {
         </StyledNavigationButton>
       </StyledNavigationLink>
       <StyledNavigationLink href="/">
-        <StyledNavigationButton>
+        <StyledNavigationButton onClick={() => router.back()}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

@@ -6,7 +6,6 @@ import NavigationBar from "@/components/NavigationBar";
 export default function Neuigkeiten() {
   return (
     <>
-      <Header />
       <div>
         <SubHeader>Neuigkeiten</SubHeader>
         <NewsList />

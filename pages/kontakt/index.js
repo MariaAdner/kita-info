@@ -12,7 +12,6 @@ const StyledArticle = styled.article`
 export default function Kontakt() {
   return (
     <>
-      <Header />
       <SubHeader>Kontakt</SubHeader>
       <StyledArticle>
         <div>
