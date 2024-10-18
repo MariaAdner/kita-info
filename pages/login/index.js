@@ -1,9 +1,10 @@
 import Authform from "@/components/AuthForm";
+import SubHeader from "@/components/SubHeader";
 
 export default function Login() {
   return (
     <div>
-      <h1>Login</h1>
+      <SubHeader>Login </SubHeader>
       <Authform />
     </div>
   );

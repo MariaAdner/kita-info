@@ -1,19 +1,25 @@
 import { useSession, signIn, signOut } from "next-auth/react";
+import {
+  StyledAuthForm,
+  StyledAuthField,
+  StyledAuthLabel,
+  StyledAuthInput,
+} from "./AuthForm.styled";
 
 export default function Authform() {
   return (
-    <form>
-      <div>
-        <label htmlFor="name">Benutzername:</label>
-        <input type="name" id="name" required />
-      </div>
-      <div>
-        <label htmlFor="password">Passwort:</label>
-        <input type="password" id="password" required />
-      </div>
+    <StyledAuthForm>
+      <StyledAuthField>
+        <StyledAuthLabel htmlFor="name">Benutzer:</StyledAuthLabel>
+        <StyledAuthInput type="name" id="name" required />
+      </StyledAuthField>
+      <StyledAuthField>
+        <StyledAuthLabel htmlFor="password">Passwort:</StyledAuthLabel>
+        <StyledAuthInput type="password" id="password" required />
+      </StyledAuthField>
       <div>
         <button>Login</button>
       </div>
-    </form>
+    </StyledAuthForm>
   );
 }
