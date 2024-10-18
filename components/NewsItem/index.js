@@ -1,10 +1,7 @@
 import useSWR from "swr";
 import { useRouter } from "next/router";
-import Header from "../Header";
 import { StyledDate, StyledTitle, StyledText } from "./NewsItem.styled";
 import { StyledNewsItem } from "./NewsItem.styled";
-import BackButton from "../BackButton";
-import Link from "next/link";
 
 export default function NewsItem() {
   const router = useRouter();
@@ -22,10 +19,6 @@ export default function NewsItem() {
 
   return (
     <>
-      <Header />
-      <Link href="/neuigkeiten">
-        <BackButton></BackButton>
-      </Link>
       <StyledNewsItem>
         <StyledTitle>{data.title}</StyledTitle>
         <StyledText

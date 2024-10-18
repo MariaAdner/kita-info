@@ -1,9 +1,6 @@
-import Header from "@/components/Header";
-import HomeButton from "@/components/HomeButton";
 import SubHeader from "@/components/SubHeader";
 import styled from "styled-components";
 import ImageGallery from "@/components/ImageGallery";
-import NavigationBar from "@/components/NavigationBar";
 
 const StyledArticle = styled.article`
   line-height: 125%;
@@ -33,7 +30,6 @@ export default function AboutUs() {
       </StyledArticle>
       <StyledSubHeadline>Bildergalerie</StyledSubHeadline>
       <ImageGallery />
-      <NavigationBar />
     </>
   );
 }

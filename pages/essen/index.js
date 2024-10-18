@@ -1,6 +1,3 @@
-import Header from "@/components/Header";
-import HomeButton from "@/components/HomeButton";
-import NavigationBar from "@/components/NavigationBar";
 import SubHeader from "@/components/SubHeader";
 import Image from "next/image";
 
@@ -26,7 +23,6 @@ export default function Essen() {
 
         {" eingesehen werden."}
       </p>
-      <NavigationBar />
     </>
   );
 }

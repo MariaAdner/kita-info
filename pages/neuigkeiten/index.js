@@ -1,7 +1,5 @@
 import NewsList from "@/components/NewsList";
-import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
-import NavigationBar from "@/components/NavigationBar";
 
 export default function Neuigkeiten() {
   return (
@@ -10,7 +8,6 @@ export default function Neuigkeiten() {
         <SubHeader>Neuigkeiten</SubHeader>
         <NewsList />
       </div>
-      <NavigationBar />
     </>
   );
 }

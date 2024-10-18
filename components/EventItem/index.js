@@ -1,14 +1,11 @@
 import useSWR from "swr";
 import { useRouter } from "next/router";
-import Header from "../Header";
 import {
   StyledEventItem,
   StyledTitle,
   StyledDate,
   StyledDescription,
 } from "./EventItem.styled";
-import BackButton from "../BackButton";
-import Link from "next/link";
 
 export default function NewsItem() {
   const router = useRouter();
@@ -26,9 +23,6 @@ export default function NewsItem() {
 
   return (
     <>
-      <Link href="/termine">
-        <BackButton></BackButton>
-      </Link>
       <StyledEventItem>
         <StyledTitle>{data.title}</StyledTitle>
         <StyledDescription
