@@ -7,11 +7,10 @@ export const StyledList = styled.ul`
 
 export const NewsLink = styled(Link)`
   width: 300px;
-  height: 50px;
-  border-radius: 5px;
-  margin: 10px;
+  height: 100px;
+  border-radius: 10px;
+  row-gap: 10px;
   list-style: none;
-  padding: 25px;
   text-align: center;
   background-color: var(--color-background);
   color: darkblue;
@@ -19,13 +18,14 @@ export const NewsLink = styled(Link)`
   flex-direction: column;
   justify-content: center;
   text-decoration: none;
+  margin: 10px;
 `;
 
 export const StyledDate = styled.div`
-  text-decoration: underline;
-  padding: 5px;
+  align-self: flex-start;
 `;
 
 export const StyledTitle = styled.div`
   font-weight: bold;
+  padding: 5px;
 `;

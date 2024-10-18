@@ -22,4 +22,6 @@ export default createGlobalStyle`
     font-family: system-ui;
     line-height: 125%;
   }
+
+
 `;

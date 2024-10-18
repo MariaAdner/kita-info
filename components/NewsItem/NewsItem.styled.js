@@ -8,6 +8,7 @@ export const StyledNewsItem = styled.div`
   justify-content: center;
   border-radius: 5px;
   margin: 50px;
+  width: 300px;
 `;
 
 export const StyledTitle = styled.h4`

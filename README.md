@@ -1,4 +1,8 @@
-# New Next Project
+# New Next Project - Kita-Info
+
+### Description
+
+Web Application for the Kindergarten Sternschnuppe: Parents can get
 
 ### Local Development
 

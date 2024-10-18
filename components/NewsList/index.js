@@ -18,7 +18,7 @@ export default function NewsList() {
       {news.map(({ _id, title, date }) => (
         <li key={_id}>
           <NewsLink href={`/neuigkeiten/${_id}`}>
-            <StyledDate> {date}:</StyledDate>
+            <StyledDate> {date}</StyledDate>
             <StyledTitle>{title}</StyledTitle>
           </NewsLink>
         </li>
