@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import NavigationBar from "@/components/NavigationBar";
 import StartPage from "@/components/StartPage";
 
 export default function HomePage() {
@@ -6,6 +7,7 @@ export default function HomePage() {
     <div>
       <Header />
       <StartPage />
+      <NavigationBar />
     </div>
   );
 }

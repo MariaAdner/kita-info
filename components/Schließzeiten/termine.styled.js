@@ -5,6 +5,9 @@ export const StyledTable = styled.table`
   border: thin solid #666;
   border-radius: 10px;
   margin: 5px;
+  width: 300px;
+  display: flex;
+  align-items: center;
 `;
 
 export const StyledColumn = styled.td`

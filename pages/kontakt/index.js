@@ -1,8 +1,8 @@
 import Header from "@/components/Header";
-import HomeButton from "@/components/HomeButton";
 import SubHeader from "@/components/SubHeader";
 import ContactForm from "@/components/ContactForm";
 import styled from "styled-components";
+import NavigationBar from "@/components/NavigationBar";
 
 const StyledArticle = styled.article`
   background-color: var(--color-background);
@@ -13,7 +13,6 @@ export default function Kontakt() {
   return (
     <>
       <Header />
-      <HomeButton />
       <SubHeader>Kontakt</SubHeader>
       <StyledArticle>
         <div>
@@ -30,6 +29,7 @@ export default function Kontakt() {
         <p>Montag - Freitag:</p>
         <p>6 - 17 Uhr</p>
       </StyledArticle>
+      <NavigationBar />
     </>
   );
 }
