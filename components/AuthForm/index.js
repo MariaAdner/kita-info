@@ -7,6 +7,8 @@ import {
 } from "./AuthForm.styled";
 
 export default function Authform() {
+  const { data: session } = useSession();
+
   return (
     <StyledAuthForm>
       <StyledAuthField>
