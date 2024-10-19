@@ -1,4 +1,4 @@
-import { StyledForm, StyledLabel } from "./ContactForm.styled";
+import { StyledForm, StyledLabel, StyledInput } from "./ContactForm.styled";
 import useSWR from "swr";
 
 export default function ContactForm() {
@@ -25,33 +25,34 @@ export default function ContactForm() {
 
   return (
     <StyledForm onSubmit={handleSubmit}>
-      <fieldset>
-        <StyledLabel htmlFor="name">
-          Name
-          <input type="text" id="name" name="name" required />
-        </StyledLabel>
-        <StyledLabel htmlFor="email">
-          E-Mail-Adresse
-          <input type="email" id="email" name="email" required />
-        </StyledLabel>
-        <StyledLabel htmlFor="message">
-          Ihre Nachricht
-          <textarea rows="3" id="message" name="message" required></textarea>
-        </StyledLabel>
-        <div>
-          <StyledLabel>
-            <input
-              type="checkbox"
-              name="Datenverarbeitung bestätigt"
-              value="Ja"
-              required
-            />
-            Ich bestätige, dass ich mit der Verarbeitung meiner Eingaben zum
-            Zwecke der Anfragebearbeitung, einverstanden bin.
-          </StyledLabel>
-        </div>
-        <button type="submit">Senden</button>
-      </fieldset>
+      <StyledInput>
+        <input type="text" id="name" name="name" placeholder="Name" required />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="E-Mail"
+          required
+        />
+        <textarea
+          rows="3"
+          id="message"
+          name="message"
+          placeholder="Ihre Nachricht oder Frage an uns"
+          required
+        ></textarea>
+      </StyledInput>
+      <StyledLabel>
+        <input
+          type="checkbox"
+          name="Datenverarbeitung bestätigt"
+          value="Ja"
+          required
+        />
+        Ich bestätige, dass ich mit der Verarbeitung meiner Eingaben zum Zwecke
+        der Anfragebearbeitung, einverstanden bin.
+      </StyledLabel>
+      <button type="submit">Senden</button>
     </StyledForm>
   );
 }

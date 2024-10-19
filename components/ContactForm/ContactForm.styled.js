@@ -7,7 +7,12 @@ export const StyledForm = styled.form`
 `;
 
 export const StyledLabel = styled.label`
+  font-size: 10pt;
+`;
+
+export const StyledInput = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 5px;
+  width: 100%;
 `;
