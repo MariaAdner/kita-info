@@ -9,6 +9,7 @@ export const StyledNewsItem = styled.div`
   border-radius: 5px;
   margin: 50px;
   width: 300px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 `;
 
 export const StyledTitle = styled.h4`

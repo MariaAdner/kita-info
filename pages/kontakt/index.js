@@ -5,6 +5,7 @@ import styled from "styled-components";
 const StyledArticle = styled.article`
   background-color: var(--color-background);
   padding: 20px;
+  margin-bottom: 100px;
 `;
 
 export default function Kontakt() {

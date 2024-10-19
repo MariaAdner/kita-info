@@ -3,6 +3,10 @@ import Link from "next/link";
 
 export const StyledList = styled.ul`
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0;
 `;
 
 export const NewsLink = styled(Link)`
@@ -19,6 +23,7 @@ export const NewsLink = styled(Link)`
   justify-content: center;
   text-decoration: none;
   margin: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 `;
 
 export const StyledDate = styled.div`

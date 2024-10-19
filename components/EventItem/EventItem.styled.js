@@ -8,6 +8,7 @@ export const StyledEventItem = styled.div`
   justify-content: center;
   border-radius: 5px;
   margin: 50px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 `;
 
 export const StyledTitle = styled.h4`

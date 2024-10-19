@@ -5,8 +5,9 @@ import ImageGallery from "@/components/ImageGallery";
 const StyledArticle = styled.article`
   line-height: 125%;
   background-color: var(--color-background-text);
-  padding: 40px;
-  margin: 50px;
+  padding: 20px;
+  margin: 10 0 10 0;
+  width: 100%;
 `;
 
 const StyledSubHeadline = styled.h3`

@@ -17,7 +17,6 @@ export default createGlobalStyle`
 
   body {
     display: grid;
-    margin: auto;
     place-items: center;
     font-family: system-ui;
     line-height: 125%;

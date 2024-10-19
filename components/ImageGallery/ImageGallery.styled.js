@@ -6,4 +6,5 @@ export const StyledGallery = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 16px;
   margin: 50px;
+  padding-left: 0;
 `;
