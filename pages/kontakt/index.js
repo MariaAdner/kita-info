@@ -6,6 +6,7 @@ const StyledArticle = styled.article`
   background-color: var(--color-background);
   padding: 20px;
   margin-bottom: 100px;
+  font-size: 10pt;
 `;
 
 export default function Kontakt() {
@@ -20,7 +21,13 @@ export default function Kontakt() {
         <div>
           <p>Adresse: Fabrikstraße 11, 08297 Zwönitz</p>
           <p>Telefon: 037754 2855</p>
-          <p>E-Mail: kita.sternschnuppe@zwoenitz.de</p>
+          <p>
+            E-Mail:
+            <a href="mailto: kita.sternschnuppe@zwoenitz.de">
+              {" "}
+              kita.sternschnuppe@zwoenitz.de{" "}
+            </a>
+          </p>
         </div>
         <ContactForm />
         <h4>Öffnungszeiten</h4>
