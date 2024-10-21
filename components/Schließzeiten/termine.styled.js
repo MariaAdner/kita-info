@@ -8,6 +8,7 @@ export const StyledTable = styled.table`
   width: 300px;
   display: flex;
   align-items: center;
+  font-size: 11pt;
 `;
 
 export const StyledColumn = styled.td`

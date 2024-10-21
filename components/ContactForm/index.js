@@ -1,8 +1,10 @@
 import { StyledForm, StyledLabel, StyledInput } from "./ContactForm.styled";
 import useSWR from "swr";
+import { useRouter } from "next/router";
 
 export default function ContactForm() {
   const { mutate } = useSWR("/api/message");
+  const router = useRouter();
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -20,13 +22,24 @@ export default function ContactForm() {
 
     if (response.ok) {
       mutate();
+
+      // router.push(`/kontakt/sendMessage`);
     }
+    console.log(messageData);
+    event.target.reset();
   }
 
   return (
     <StyledForm onSubmit={handleSubmit}>
       <StyledInput>
-        <input type="text" id="name" name="name" placeholder="Name" required />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Name"
+          defaultValue={""}
+          required
+        />
         <input
           type="email"
           id="email"
