@@ -19,7 +19,7 @@ export default function Login() {
           </button>
         )}
       </div>
-      <LoginButton />
+      <Authform />
     </>
   );
 }

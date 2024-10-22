@@ -11,7 +11,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 
 export default function Authform() {
-  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
@@ -19,25 +19,15 @@ export default function Authform() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      const res = await signIn("credentials", {
-        name,
-        password,
-        redirect: false,
-      });
-
-      console.log(password);
-
-      if (res?.error) {
-        setError("Invalid Credentials");
-        return;
+    signIn("credentials", { username, password, redirect: false }).then(
+      async (e) => {
+        if (e.error) {
+          setError("Invalid email/password");
+        } else {
+          router.push("/");
+        }
       }
-
-      router.push("/");
-    } catch (error) {
-      console.log(error);
-    }
+    );
   };
 
   return (
@@ -47,7 +37,7 @@ export default function Authform() {
         <StyledAuthInput
           type="name"
           id="name"
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setUsername(e.target.value)}
           required
         />
       </StyledAuthField>
@@ -63,7 +53,6 @@ export default function Authform() {
       <div>
         <button>Login</button>
       </div>
-      <LoginButton />
       {error && <div>{error}</div>}
     </StyledAuthForm>
   );
