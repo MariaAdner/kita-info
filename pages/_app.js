@@ -12,8 +12,8 @@ export default function App({
 }) {
   return (
     <>
+      <GlobalStyle />
       <SessionProvider session={session}>
-        <GlobalStyle />
         <SWRConfig value={{ fetcher }}>
           <Header />
           <Component {...pageProps} />

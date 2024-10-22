@@ -1,41 +1,61 @@
-import NextAuth from "next-auth";
-
-import GithubProvider from "next-auth/providers/github";
-
-import { MongoDBAdapter } from "@auth/mongodb-adapter";
-
-import clientPromise from "@/db/mongodb";
-
-import dbConnect from "@/db/connect";
-
 import User from "@/db/models/User";
+import NextAuth from "next-auth/next";
+import CredentialProvider from "next-auth/providers/credentials";
+import clientPromise from "@/db/mongodb";
+import dbConnect from "@/db/connect";
+import { MongoDBAdapter } from "@auth/mongodb-adapter";
+import bcrypt from "bcryptjs";
 
 export default NextAuth({
-  // Configure one or more authentication providers
-
   providers: [
-    GithubProvider({
-      clientId: process.env.GITHUB_ID,
+    CredentialProvider({
+      name: "credentials",
+      credentials: {
+        username: {
+          label: "Email",
+          type: "text",
+          placeholder: "johndoe@test.com",
+        },
+        password: { label: "Password", type: "password" },
+      },
+      authorize: (credentials) => {
+        // database look up
+        if (
+          credentials.username === "john" &&
+          credentials.password === "test"
+        ) {
+          return {
+            id: 2,
+            name: "John",
+            email: "johndoe@test.com",
+          };
+        }
 
-      clientSecret: process.env.GITHUB_SECRET,
+        // login failed
+        return null;
+      },
     }),
   ],
-
-  adapter: MongoDBAdapter(clientPromise),
-
   callbacks: {
-    async session({ session, user }) {
-      dbConnect();
-
-      const currentUser = await User.findById(user.id);
-
-      if (currentUser.favoritePonies == null) {
-        currentUser.favoritePonies = [];
-
-        currentUser.save();
+    jwt: ({ token, user }) => {
+      // first time jwt callback is run, user object is available
+      if (user) {
+        token.id = user.id;
       }
 
-      return { ...session, user: { ...session.user, id: user.id } };
+      return token;
     },
+    session: ({ session, token }) => {
+      if (token) {
+        session.id = token.id;
+      }
+
+      return session;
+    },
+  },
+  secret: "test",
+  jwt: {
+    secret: "test",
+    encryption: true,
   },
 });
