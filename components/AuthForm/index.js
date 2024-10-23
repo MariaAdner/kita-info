@@ -7,7 +7,7 @@ import {
   StyledAuthInput,
 } from "./AuthForm.styled";
 import { useState } from "react";
-import { signIn } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 
 export default function Authform() {
@@ -15,6 +15,7 @@ export default function Authform() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  const { data: session } = useSession();
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -51,7 +52,11 @@ export default function Authform() {
         />
       </StyledAuthField>
       <div>
-        <button>Login</button>
+        {session ? (
+          <button onClick={() => signOut()}>Log out</button>
+        ) : (
+          <button>Login</button>
+        )}
       </div>
       {error && <div>{error}</div>}
     </StyledAuthForm>

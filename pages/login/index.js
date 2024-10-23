@@ -11,13 +11,6 @@ export default function Login() {
     <>
       <div>
         <SubHeader>Login </SubHeader>
-        {session ? (
-          <button onClick={() => signOut()}>Log out</button>
-        ) : (
-          <button type="button" onClick={() => signIn()}>
-            Login
-          </button>
-        )}
       </div>
       <Authform />
     </>
