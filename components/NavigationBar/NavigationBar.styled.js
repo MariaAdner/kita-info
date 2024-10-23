@@ -22,4 +22,9 @@ export const StyledNavigationButton = styled.button`
   background-color: var(--color-main);
   color: white;
   border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
 `;
