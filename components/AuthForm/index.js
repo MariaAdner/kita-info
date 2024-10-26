@@ -1,6 +1,12 @@
 import { useState, useRef } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
+import {
+  StyledAuthForm,
+  StyledAuthField,
+  StyledAuthInput,
+  StyledAuthLabel,
+} from "./AuthForm.styled";
 
 async function createUser(name, email, password) {
   const response = await fetch("/api/auth/signup", {
@@ -39,8 +45,6 @@ export default function AuthForm() {
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
 
-    // optional: Add validation
-
     if (isLogin) {
       const result = await signIn("credentials", {
         redirect: false,
@@ -49,23 +53,11 @@ export default function AuthForm() {
         password: enteredPassword,
       });
 
-      //       console.log(result);
-      //       if (result?.error) {
-      //         alert(result?.error);
-      //       } else {
-      //         alert("sign in successful");
-      //         router.replace("/");
-      //       }
-      //     }
-      //   }
-
       if (!result.error) {
-        // set some auth state
         router.replace("/");
       }
     } else {
       try {
-        // const result = await User.findOne;
         const result = await createUser(
           enteredName,
           enteredEmail,
@@ -80,32 +72,36 @@ export default function AuthForm() {
 
   return (
     <section>
-      <h1>{isLogin ? "Login" : "Sign Up"}</h1>
-      <form onSubmit={submitHandler}>
-        <div>
-          <label htmlFor="name">Your Name</label>
-          <input type="name" id="name" required ref={nameInputRef} />
-        </div>
-        <div>
-          <label htmlFor="email">Your Name</label>
-          <input type="email" id="email" required ref={emailInputRef} />
-        </div>
-        <div>
-          <label htmlFor="password">Your Password</label>
-          <input
+      <StyledAuthForm onSubmit={submitHandler}>
+        <StyledAuthField>
+          <StyledAuthLabel htmlFor="name">Benutzer:</StyledAuthLabel>
+          <StyledAuthInput type="name" id="name" required ref={nameInputRef} />
+        </StyledAuthField>
+        <StyledAuthField>
+          <StyledAuthLabel htmlFor="email">E-Mail:</StyledAuthLabel>
+          <StyledAuthInput
+            type="email"
+            id="email"
+            required
+            ref={emailInputRef}
+          />
+        </StyledAuthField>
+        <StyledAuthField>
+          <StyledAuthLabel htmlFor="password">Passwort</StyledAuthLabel>
+          <StyledAuthInput
             type="password"
             id="password"
             required
             ref={passwordInputRef}
           />
-        </div>
+        </StyledAuthField>
         <div>
-          <button>{isLogin ? "Login" : "Create Account"}</button>
+          <button>{isLogin ? "Login" : "Registrieren"}</button>
           <button type="button" onClick={switchAuthModeHandler}>
-            {isLogin ? "Create new account" : "Login with existing account"}
+            {isLogin ? "Neues Konto anlegen" : "Login mit Konto"}
           </button>
         </div>
-      </form>
+      </StyledAuthForm>
     </section>
   );
 }
