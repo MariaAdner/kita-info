@@ -45,7 +45,7 @@ export default function NavigationBar() {
           </StyledNavigationButton>
         )}
       </StyledNavigationLink>
-      <StyledNavigationLink href="/">
+      <StyledNavigationLink href="/login">
         <StyledNavigationButton>
           <svg
             xmlns="http://www.w3.org/2000/svg"
