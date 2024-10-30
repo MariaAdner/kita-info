@@ -54,7 +54,7 @@ export default function AuthForm() {
       });
 
       if (!result.error) {
-        router.replace("/");
+        router.replace("/profile");
       }
     } else {
       try {
