@@ -23,7 +23,7 @@ export default NextAuth({
 
         try {
           const user = await User.findOne({
-            name: credentials.name,
+            email: credentials.email,
           });
 
           if (user) {

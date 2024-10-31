@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 import {
@@ -8,65 +8,29 @@ import {
   StyledAuthLabel,
 } from "./AuthForm.styled";
 
-async function createUser(name, email, password) {
-  const response = await fetch("/api/auth/signup", {
-    method: "POST",
-    body: JSON.stringify({ name, email, password }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(data.message || "Something went wrong!");
-  }
-
-  return data;
-}
-
 export default function AuthForm() {
-  const nameInputRef = useRef();
-  const emailInputRef = useRef();
-  const passwordInputRef = useRef();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const [isLogin, setIsLogin] = useState(true);
   const router = useRouter();
-
-  function switchAuthModeHandler() {
-    setIsLogin((prevState) => !prevState);
-  }
 
   async function submitHandler(event) {
     event.preventDefault();
 
-    const enteredName = nameInputRef.current.value;
-    const enteredEmail = emailInputRef.current.value;
-    const enteredPassword = passwordInputRef.current.value;
-
-    if (isLogin) {
+    try {
       const result = await signIn("credentials", {
+        email: email,
+        password: password,
         redirect: false,
-        name: enteredName,
-        email: enteredEmail,
-        password: enteredPassword,
       });
 
-      if (!result.error) {
-        router.replace("/profile");
-      }
-    } else {
-      try {
-        const result = await createUser(
-          enteredName,
-          enteredEmail,
-          enteredPassword
-        );
-        console.log(result);
-      } catch (error) {
-        console.log(error);
-      }
+      if (result.error) {
+        setError("Invalid Credentials");
+        return;
+      } else router.replace("/profile");
+    } catch (error) {
+      console.log(error);
     }
   }
 
@@ -74,16 +38,12 @@ export default function AuthForm() {
     <section>
       <StyledAuthForm onSubmit={submitHandler}>
         <StyledAuthField>
-          <StyledAuthLabel htmlFor="name">Benutzer:</StyledAuthLabel>
-          <StyledAuthInput type="name" id="name" required ref={nameInputRef} />
-        </StyledAuthField>
-        <StyledAuthField>
           <StyledAuthLabel htmlFor="email">E-Mail:</StyledAuthLabel>
           <StyledAuthInput
             type="email"
             id="email"
             required
-            ref={emailInputRef}
+            onChange={(event) => setEmail(event.target.value)}
           />
         </StyledAuthField>
         <StyledAuthField>
@@ -92,15 +52,13 @@ export default function AuthForm() {
             type="password"
             id="password"
             required
-            ref={passwordInputRef}
+            onChange={(event) => setPassword(event.target.value)}
           />
         </StyledAuthField>
         <div>
-          <button>{isLogin ? "Login" : "Registrieren"}</button>
-          <button type="button" onClick={switchAuthModeHandler}>
-            {isLogin ? "Neues Konto anlegen" : "Login mit Konto"}
-          </button>
+          <button>Login</button>
         </div>
+        {error && <div>{error}</div>}
       </StyledAuthForm>
     </section>
   );
