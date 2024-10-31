@@ -6,6 +6,7 @@ import {
   StyledAuthField,
   StyledAuthInput,
   StyledAuthLabel,
+  StyledError,
 } from "./AuthForm.styled";
 
 export default function AuthForm() {
@@ -26,7 +27,7 @@ export default function AuthForm() {
       });
 
       if (result.error) {
-        setError("Invalid Credentials");
+        setError("Ungültige Anmeldedaten");
         return;
       } else router.replace("/profile");
     } catch (error) {
@@ -58,7 +59,7 @@ export default function AuthForm() {
         <div>
           <button>Login</button>
         </div>
-        {error && <div>{error}</div>}
+        {error && <StyledError>{error}</StyledError>}
       </StyledAuthForm>
     </section>
   );

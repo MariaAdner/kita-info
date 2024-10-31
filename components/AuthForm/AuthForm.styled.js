@@ -30,3 +30,11 @@ export const StyledAuthInput = styled.input`
   text-align: left;
   padding: 0.25rem;
 `;
+
+export const StyledError = styled.div`
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+`;
