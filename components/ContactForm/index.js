@@ -1,4 +1,5 @@
 import { StyledForm, StyledLabel, StyledInput } from "./ContactForm.styled";
+import { StyledButton } from "../Button/Button.styled";
 import useSWR from "swr";
 import { useRouter } from "next/router";
 
@@ -65,7 +66,7 @@ export default function ContactForm() {
         Ich bestätige, dass ich mit der Verarbeitung meiner Eingaben zum Zwecke
         der Anfragebearbeitung, einverstanden bin.
       </StyledLabel>
-      <button type="submit">Senden</button>
+      <StyledButton type="submit">Senden</StyledButton>
     </StyledForm>
   );
 }
