@@ -8,6 +8,7 @@ import {
   StyledAuthLabel,
   StyledError,
 } from "./AuthForm.styled";
+import { StyledButton } from "../Button/Button.styled";
 
 export default function AuthForm() {
   const [email, setEmail] = useState("");
@@ -48,7 +49,7 @@ export default function AuthForm() {
           />
         </StyledAuthField>
         <StyledAuthField>
-          <StyledAuthLabel htmlFor="password">Passwort</StyledAuthLabel>
+          <StyledAuthLabel htmlFor="password">Passwort:</StyledAuthLabel>
           <StyledAuthInput
             type="password"
             id="password"
@@ -57,7 +58,7 @@ export default function AuthForm() {
           />
         </StyledAuthField>
         <div>
-          <button>Login</button>
+          <StyledButton>Login</StyledButton>
         </div>
         {error && <StyledError>{error}</StyledError>}
       </StyledAuthForm>
