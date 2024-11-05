@@ -15,7 +15,7 @@ export default function StartPage() {
           Auf dieser Seite möchten wir uns mit einigen Zeilen kurz vorstellen.
         </p>
         <p>
-          Eltern haben zudem die Möglichkeit, sich über ein Login-Konto , über
+          Eltern haben zudem die Möglichkeit, sich über ein Login-Konto, über
           wichtige Informationen, Neuigkeiten und Termine auf dem Laufenden zu
           halten, Krankmeldungen vorzunehmen und über den kurzen schnellen Weg
           mit der Kita zu kommunizieren.
@@ -52,16 +52,17 @@ export default function StartPage() {
           alt="picture of a meal"
         />
         <p>
-          {"Verpflegung durch "}
+          {"Unser Mittagessen wird vom Catering der  "}
 
           <a href="https://bestellung.h3-schmeckt.de/">H3-Group</a>
+          {" übernommen."}
         </p>
         <p>
-          {"Der Speiseplan kann unter dem "}
+          {"Der Speiseplan kann "}
 
-          <a href="https://bestellung.h3-essen.de/">Login</a>
+          <a href="https://bestellung.h3-essen.de/">hier</a>
 
-          {" eingesehen werden."}
+          {" nach dem Login eingesehen werden."}
         </p>
       </Article>
       <SubHeader>Kontakt</SubHeader>

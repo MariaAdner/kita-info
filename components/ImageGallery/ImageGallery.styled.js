@@ -7,4 +7,8 @@ export const StyledGallery = styled.div`
   gap: 16px;
   margin: 50px;
   padding-left: 0;
+  @media (min-width: 400px) {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
 `;

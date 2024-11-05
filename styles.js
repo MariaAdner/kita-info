@@ -20,6 +20,7 @@ export default createGlobalStyle`
     place-items: center;
     font-family: system-ui;
     line-height: 125%;
+    background-color: var(--color-background);
   }
 
 
