@@ -1,5 +1,11 @@
 import { useSession } from "next-auth/react";
 import { Menu, MenuLink, StyledLink } from "@/components/Item/Item.styled";
+import styled from "styled-components";
+
+const StyledGreeting = styled.h4`
+  font-weight: 300;
+  text-color: var (--color-text);
+`;
 
 export default function ProfileOverview() {
   const { data: session } = useSession();
@@ -7,16 +13,21 @@ export default function ProfileOverview() {
   if (session)
     return (
       <div>
-        <h4> Hallo, lieber {session.user.name}</h4>
+        <StyledGreeting>
+          Hallo, lieber <strong>{session.user.name}</strong> !
+        </StyledGreeting>
         <Menu>
           <StyledLink href="profile/aktuelles">
             <MenuLink> Aktuelles </MenuLink>
           </StyledLink>
-          <StyledLink href="/neuigkeiten">
+          <StyledLink href="profile/neuigkeiten">
             <MenuLink> Neuigkeiten </MenuLink>
           </StyledLink>
           <StyledLink href="profile/bedarfsabfragen">
             <MenuLink> Bedarfsabfragen </MenuLink>
+          </StyledLink>
+          <StyledLink href="profile/termine">
+            <MenuLink> Termine </MenuLink>
           </StyledLink>
         </Menu>
       </div>

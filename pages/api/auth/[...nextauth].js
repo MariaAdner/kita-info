@@ -7,7 +7,7 @@ import User from "../../../db/models/User";
 
 import { verifyPassword } from "../../../db/password";
 
-export default NextAuth({
+export const authOptions = {
   adapter: MongoDBAdapter(clientPromise),
   session: {
     strategy: "jwt",
@@ -65,4 +65,6 @@ export default NextAuth({
       }
     },
   },
-});
+};
+
+export default NextAuth(authOptions);

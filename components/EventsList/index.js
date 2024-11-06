@@ -21,7 +21,7 @@ export default function EventsList() {
     <StyledList>
       {events.map(({ _id, title, date }) => (
         <li key={_id}>
-          <EventsLink href={`/termine/${_id}`}>
+          <EventsLink href={`/profile/termine/${_id}`}>
             <StyledDate> {date}:</StyledDate>
             <StyledTitle>{title}</StyledTitle>
           </EventsLink>

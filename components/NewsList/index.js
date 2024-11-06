@@ -17,7 +17,7 @@ export default function NewsList() {
     <StyledList>
       {news.map(({ _id, title, date }) => (
         <li key={_id}>
-          <NewsLink href={`/neuigkeiten/${_id}`}>
+          <NewsLink href={`/profile/neuigkeiten/${_id}`}>
             <StyledDate> {date}</StyledDate>
             <StyledTitle>{title}</StyledTitle>
           </NewsLink>

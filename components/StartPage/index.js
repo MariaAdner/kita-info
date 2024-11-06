@@ -1,5 +1,5 @@
 import SubHeader from "../SubHeader";
-import { Article, Headline } from "./StartPage.styled";
+import { Article, Headline, Textfield } from "./StartPage.styled";
 import ImageGallery from "../ImageGallery";
 import Image from "next/image";
 import ContactForm from "../ContactForm";
@@ -82,10 +82,12 @@ export default function StartPage() {
           </p>
         </div>
         <ContactForm />
-        <Headline>Öffnungszeiten</Headline>
+      </Article>
+      <Headline>Öffnungszeiten</Headline>
+      <Textfield>
         <p>Montag - Freitag:</p>
         <p>6 - 17 Uhr</p>
-      </Article>
+      </Textfield>
     </>
   );
 }
