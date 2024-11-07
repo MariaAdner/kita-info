@@ -23,10 +23,9 @@ export default function ContactForm() {
 
     if (response.ok) {
       mutate();
-
-      // router.push(`/kontakt/sendMessage`);
     }
-    console.log(messageData);
+
+    router.push("/sendmessage");
     event.target.reset();
   }
 

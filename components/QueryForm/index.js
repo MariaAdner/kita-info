@@ -23,6 +23,8 @@ export default function QueryForm() {
     if (response.ok) {
       mutate();
     }
+
+    router.push("/profile/thanks");
   }
 
   return (
