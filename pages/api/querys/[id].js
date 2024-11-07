@@ -14,4 +14,10 @@ export default async function handler(request, response) {
     }
     response.status(200).json(querys);
   }
+
+  if ((request.method = "PUT")) {
+    const queryData = request.body;
+    await Query.findByIdAndUpdate(id, queryData);
+    return response.status(200).json({ status: `Query ${id} updated!` });
+  }
 }

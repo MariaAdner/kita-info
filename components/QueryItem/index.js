@@ -17,10 +17,8 @@ export default function QueryItem() {
 
   return (
     <>
-      <div>
-        <h2>{data.title}</h2>
-        <p dangerouslySetInnerHTML={{ __html: data.text }}></p>
-      </div>
+      <h2>{data.title}</h2>
+      <p dangerouslySetInnerHTML={{ __html: data.text }}></p>
     </>
   );
 }
