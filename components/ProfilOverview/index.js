@@ -23,7 +23,7 @@ export default function ProfileOverview() {
           <StyledLink href="profile/neuigkeiten">
             <MenuLink> Neuigkeiten </MenuLink>
           </StyledLink>
-          <StyledLink href="profile/bedarfsabfragen">
+          <StyledLink href="profile/query">
             <MenuLink> Bedarfsabfragen </MenuLink>
           </StyledLink>
           <StyledLink href="profile/termine">
