@@ -19,6 +19,11 @@ export default function QueryItem() {
     <>
       <h2>{data.title}</h2>
       <p dangerouslySetInnerHTML={{ __html: data.text }}></p>
+      {data.query !== " " && (
+        <p>
+          Sie haben sich bereits für <strong>{data.answer} </strong>entschieden.
+        </p>
+      )}
     </>
   );
 }

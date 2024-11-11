@@ -1,5 +1,9 @@
 import { useSession } from "next-auth/react";
-import { Menu, MenuLink, StyledLink } from "@/components/Item/Item.styled";
+import {
+  Menu,
+  MenuLink,
+  StyledLink,
+} from "@/components/StyledItem/Item.styled";
 import styled from "styled-components";
 
 const StyledGreeting = styled.h4`
@@ -9,6 +13,7 @@ const StyledGreeting = styled.h4`
 
 export default function ProfileOverview() {
   const { data: session } = useSession();
+  console.log(session);
 
   if (session)
     return (

@@ -25,17 +25,18 @@ export default function QueryForm() {
     }
 
     router.push("/profile/thanks");
+    console.log(queryData);
   }
 
   return (
     <>
       <form onSubmit={handleQuery}>
         <div>
-          <input type="radio" id="Ja" name="query" value="Ja" />
+          <input type="radio" id="Ja" name="answer" value="Ja" />
           <label for="Ja">Ja</label>
         </div>
         <div>
-          <input type="radio" id="Nein" name="query" value="Nein" />
+          <input type="radio" id="Nein" name="answer" value="Nein" />
           <label for="Nein">Nein</label>
         </div>
         <button type="submit">Absenden</button>

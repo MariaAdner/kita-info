@@ -15,7 +15,7 @@ export default function Tablesaying() {
   return (
     <>
       <Headline>Unser Tischspruch</Headline>
-      <Card>
+      <Card $variant="green">
         {data.map(({ _id, description }) => (
           <li key={_id}>
             <p dangerouslySetInnerHTML={{ __html: description }}></p>

@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import Link from "next/link";
+import { StyledList, StyledLink, StyledTitle } from "../StyledList/list.styled";
 
 export default function QueryList() {
   const { data: querys, isLoading } = useSWR("/api/querys");
@@ -13,16 +13,15 @@ export default function QueryList() {
   }
 
   return querys.length ? (
-    <ul>
-      {querys.map(({ _id, title, date }) => (
+    <StyledList>
+      {querys.map(({ _id, title }) => (
         <li key={_id}>
-          <Link href={`/profile/query/${_id}`}>
-            <p>{title}</p>
-            <p>{date}</p>
-          </Link>
+          <StyledLink href={`/profile/query/${_id}`}>
+            <StyledTitle>{title}</StyledTitle>
+          </StyledLink>
         </li>
       ))}
-    </ul>
+    </StyledList>
   ) : (
     "Keine Abfragen"
   );

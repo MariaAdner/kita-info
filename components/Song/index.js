@@ -15,7 +15,7 @@ export default function Song() {
   return (
     <>
       <Headline>Das Lied, das wir gerade singen: </Headline>
-      <Card>
+      <Card $variant="yellow">
         {songs.map(({ _id, title, description }) => (
           <li key={_id}>
             <CardTitle>{title}</CardTitle>

@@ -1,10 +1,11 @@
 import useSWR from "swr";
 import {
   StyledList,
-  EventsLink,
+  StyledLink,
+  StyledItem,
   StyledDate,
   StyledTitle,
-} from "./EventsList.styled";
+} from "../StyledList/list.styled";
 
 export default function EventsList() {
   const { data: events, isLoading } = useSWR("/api/events");
@@ -20,12 +21,12 @@ export default function EventsList() {
   return events.length ? (
     <StyledList>
       {events.map(({ _id, title, date }) => (
-        <li key={_id}>
-          <EventsLink href={`/profile/termine/${_id}`}>
-            <StyledDate> {date}:</StyledDate>
+        <StyledItem key={_id}>
+          <StyledLink href={`/profile/termine/${_id}`}>
+            <StyledDate $variant="termine"> {date}</StyledDate>
             <StyledTitle>{title}</StyledTitle>
-          </EventsLink>
-        </li>
+          </StyledLink>
+        </StyledItem>
       ))}
     </StyledList>
   ) : (
