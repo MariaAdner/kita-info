@@ -26,7 +26,7 @@ export default function ProfileOverview() {
             <MenuLink> Aktuelles </MenuLink>
           </StyledLink>
           <StyledLink href="profile/neuigkeiten">
-            <MenuLink> Neuigkeiten </MenuLink>
+            <MenuLink> Informationen </MenuLink>
           </StyledLink>
           <StyledLink href="profile/query">
             <MenuLink> Bedarfsabfragen </MenuLink>

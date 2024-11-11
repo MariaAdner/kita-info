@@ -5,7 +5,7 @@ export default function Neuigkeiten() {
   return (
     <>
       <div>
-        <SubHeader>Neuigkeiten</SubHeader>
+        <SubHeader>Informationen</SubHeader>
         <NewsList />
       </div>
     </>
