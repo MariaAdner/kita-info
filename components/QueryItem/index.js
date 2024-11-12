@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import useSWR from "swr";
+import { Card, CardTitle, CardText } from "../Card/Card.styled";
 
 export default function QueryItem() {
   const router = useRouter();
@@ -17,13 +18,16 @@ export default function QueryItem() {
 
   return (
     <>
-      <h2>{data.title}</h2>
-      <p dangerouslySetInnerHTML={{ __html: data.text }}></p>
-      {data.query !== " " && (
-        <p>
-          Sie haben sich bereits für <strong>{data.answer} </strong>entschieden.
-        </p>
-      )}
+      <Card $variant="green">
+        <CardTitle>{data.title}</CardTitle>
+        <CardText dangerouslySetInnerHTML={{ __html: data.text }}></CardText>
+        {data.query !== " " && (
+          <CardText>
+            Sie haben sich bereits für <strong>{data.answer} </strong>
+            entschieden.
+          </CardText>
+        )}
+      </Card>
     </>
   );
 }

@@ -1,5 +1,11 @@
 import { useRouter } from "next/router";
 import useSWR from "swr";
+import {
+  StyledForm,
+  StyledRadioButtonMenu,
+  StyledRadioButton,
+} from "./queryform.styled";
+import { StyledButton } from "../Button/Button.styled";
 
 export default function QueryForm() {
   const router = useRouter();
@@ -30,17 +36,19 @@ export default function QueryForm() {
 
   return (
     <>
-      <form onSubmit={handleQuery}>
-        <div>
-          <input type="radio" id="Ja" name="answer" value="Ja" />
-          <label for="Ja">Ja</label>
-        </div>
-        <div>
-          <input type="radio" id="Nein" name="answer" value="Nein" />
-          <label for="Nein">Nein</label>
-        </div>
-        <button type="submit">Absenden</button>
-      </form>
+      <StyledForm onSubmit={handleQuery}>
+        <StyledRadioButtonMenu>
+          <StyledRadioButton>
+            <input type="radio" id="Ja" name="answer" value="Ja" />
+            <label for="Ja">Ja</label>
+          </StyledRadioButton>
+          <StyledRadioButton>
+            <input type="radio" id="Nein" name="answer" value="Nein" />
+            <label for="Nein">Nein</label>
+          </StyledRadioButton>
+        </StyledRadioButtonMenu>
+        <StyledButton type="submit">Absenden</StyledButton>
+      </StyledForm>
     </>
   );
 }

@@ -1,7 +1,6 @@
 import useSWR from "swr";
 import { useRouter } from "next/router";
-import { StyledDate, StyledTitle, StyledText } from "./NewsItem.styled";
-import { StyledNewsItem } from "./NewsItem.styled";
+import { Card, CardTitle, CardDate, CardText } from "../Card/Card.styled";
 
 export default function NewsItem() {
   const router = useRouter();
@@ -19,13 +18,11 @@ export default function NewsItem() {
 
   return (
     <>
-      <StyledNewsItem>
-        <StyledTitle>{data.title}</StyledTitle>
-        <StyledText
-          dangerouslySetInnerHTML={{ __html: data.text }}
-        ></StyledText>
-        <StyledDate>{data.date}</StyledDate>
-      </StyledNewsItem>
+      <Card $variant="yellow">
+        <CardTitle>{data.title}</CardTitle>
+        <CardText dangerouslySetInnerHTML={{ __html: data.text }}></CardText>
+        <CardDate>{data.date}</CardDate>
+      </Card>
     </>
   );
 }

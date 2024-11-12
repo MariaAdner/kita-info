@@ -15,7 +15,7 @@ export const StyledLink = styled(Link)`
   border-radius: 10px;
   list-style: none;
   text-align: center;
-  background-color: var(--color-background);
+  background-color: var(--color-background-list);
   color: darkblue;
   display: flex;
   flex-direction: column;
