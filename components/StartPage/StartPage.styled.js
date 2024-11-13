@@ -16,7 +16,7 @@ export const Headline = styled.h4`
   color: var(--color-headline);
   padding-left: 50px;
   @media (min-width: 400px) {
-    padding-left: 150px;
+    padding-left: 300px;
   }
 `;
 
@@ -24,7 +24,7 @@ export const Textfield = styled.div`
   padding-left: 50px;
   padding-bottom: 50px;
   @media (min-width: 400px) {
-    padding-left: 150px;
+    padding-left: 300px;
     padding-right: 150px;
   }
 `;
@@ -45,6 +45,7 @@ export const ContactSection = styled.article`
   @media (min-width: 400px) {
     display: flex;
     flex-rection: row;
+    justify-content: center;
     padding-left: 150px;
   }
 `;
