@@ -3,7 +3,7 @@ import {
   StyledLabel,
   StyledInput,
   StyledInputField,
-  StyledInputCheck,
+  StyledTextarea,
 } from "./ContactForm.styled";
 import { StyledButton } from "../Button/Button.styled";
 import useSWR from "swr";
@@ -52,27 +52,20 @@ export default function ContactForm() {
           placeholder="E-Mail"
           required
         />
-        <textarea
+        <StyledTextarea
           rows="5"
           id="message"
           name="message"
           placeholder="Ihre Nachricht oder Frage an uns"
           required
-        ></textarea>
+        ></StyledTextarea>
       </StyledInput>
-      <StyledInputCheck>
-        <input
-          type="checkbox"
-          name="Datenverarbeitung bestätigt"
-          value="Ja"
-          required
-        />
-        <StyledLabel>
-          Ich bestätige, dass ich mit der Verarbeitung meiner Eingaben zum
-          Zwecke der Anfragebearbeitung, einverstanden bin.
-        </StyledLabel>
-      </StyledInputCheck>
-      <StyledButton type="submit">Senden</StyledButton>
+
+      <div>
+        <StyledButton $variant="white" type="submit">
+          Senden
+        </StyledButton>
+      </div>
     </StyledForm>
   );
 }

@@ -6,7 +6,7 @@ import {
 import { useRouter } from "next/router";
 import { signIn, signOut, useSession } from "next-auth/react";
 
-export default function NavigationBar() {
+export default function Navigation() {
   const router = useRouter();
   const { data: session } = useSession();
 

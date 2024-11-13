@@ -5,6 +5,7 @@ export default createGlobalStyle`
   --color-main: #2d89ef;
   --color-text: #4d4d4d;
   --color-background: #eff4ff;
+  --color-background1: #88aadd;
   --color-background-list: #FFF5CC;
   --color-background-item: #ffecb3;
   --color-background-item1: #d3e39c;
@@ -23,6 +24,7 @@ export default createGlobalStyle`
     font-family: system-ui;
     line-height: 125%;
     background-color: var(--color-background);
+    margin:0;
   }
 
 

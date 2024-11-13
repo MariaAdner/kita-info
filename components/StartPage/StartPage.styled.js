@@ -36,6 +36,7 @@ export const StyledImage = styled(Image)`
 `;
 
 export const ContactSection = styled.article`
+  background-color: var(--color-background1);
   padding-top: 20px;
   padding-bottom: 10px;
   padding-left: 50px;

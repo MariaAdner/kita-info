@@ -21,15 +21,22 @@ export const StyledInput = styled.div`
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  margin-bottom: 10px;
   @media (min-width: 400px) {
     width: 500px;
   }
 `;
 
 export const StyledInputField = styled.input`
-  padding: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid white;
+  font: inherit;
 `;
 
-export const StyledInputCheck = styled.div`
-  width: 500px;
+export const StyledTextarea = styled.textarea`
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid white;
+  font: inherit;
 `;

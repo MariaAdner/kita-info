@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledButton = styled.button`
   background-color: var(--color-main);
@@ -8,4 +8,11 @@ export const StyledButton = styled.button`
   font-weight: bold;
   border: none;
   padding: 10px;
+
+  ${(props) =>
+    props.$variant === "white" &&
+    css`
+      background-color: var(--color-background);
+      color: var(--color-text);
+    `};
 `;
