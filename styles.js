@@ -5,6 +5,7 @@ const kitaInfoFont = Inter({
   weight: ["400", "600", "700"],
   style: ["normal"],
   subsets: ["latin"],
+  display: "swap",
 });
 
 export default createGlobalStyle`
@@ -28,7 +29,7 @@ export default createGlobalStyle`
   body {
     display: grid;
     place-items: center;
-    font-family:  font-family: ${kitaInfoFont.style.fontFamily};
+    font-family:  ${kitaInfoFont.style.fontFamily};
     line-height: 125%;
     background-color: var(--color-background);
     margin:0;
