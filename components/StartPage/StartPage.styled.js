@@ -37,6 +37,7 @@ export const StyledImage = styled(Image)`
 
 export const ContactSection = styled.article`
   background-color: var(--color-background1);
+  color: white;
   padding-top: 20px;
   padding-bottom: 10px;
   padding-left: 50px;
@@ -54,5 +55,17 @@ export const FoodSection = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+`;
+
+export const AboutUsSection = styled.article`
+  background-color: var(--color-background1);
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  @media (min-width: 400px) {
+    padding-left: 150px;
+    padding-right: 150px;
   }
 `;

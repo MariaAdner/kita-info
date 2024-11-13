@@ -6,7 +6,7 @@ export const StyledNavigation = styled.div`
   background-color: var(--color-main);
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -15,7 +15,7 @@ export const StyledNavigation = styled.div`
 
 export const StyledNavigationLink = styled(Link)`
   padding: 12px;
-  font-size: 17px;
+  font-size: 20px;
 `;
 
 export const StyledNavigationButton = styled.button`

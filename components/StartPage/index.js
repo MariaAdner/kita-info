@@ -6,9 +6,9 @@ import {
   StyledImage,
   ContactSection,
   FoodSection,
+  AboutUsSection,
 } from "./StartPage.styled";
 import ImageGallery from "../ImageGallery";
-import Image from "next/image";
 import ContactForm from "../ContactForm";
 
 export default function StartPage() {
@@ -29,7 +29,7 @@ export default function StartPage() {
         </p>
       </Article>
       <SubHeader>Über uns</SubHeader>
-      <Article>
+      <AboutUsSection>
         <p>
           Die Kita Sternschnuppe befindet sich im Zwönitzer Ortsteil
           Dorfchemnitz. Auf 400 Quaddrametern bietet die Einrichtung Platz für
@@ -47,7 +47,7 @@ export default function StartPage() {
           eine große Sandlandschaft sowie zwei Klettergerüste. Die Kinder können
           zudem verschiedene Fahrzeuge aus dem Geräteschuppen benutzen.
         </p>
-      </Article>
+      </AboutUsSection>
       <Headline>Bildergalerie</Headline>
       <ImageGallery />
 
