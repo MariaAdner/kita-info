@@ -1,5 +1,12 @@
 import SubHeader from "../SubHeader";
-import { Article, Headline, Textfield } from "./StartPage.styled";
+import {
+  Article,
+  Headline,
+  Textfield,
+  StyledImage,
+  ContactSection,
+  FoodSection,
+} from "./StartPage.styled";
 import ImageGallery from "../ImageGallery";
 import Image from "next/image";
 import ContactForm from "../ContactForm";
@@ -43,46 +50,50 @@ export default function StartPage() {
       </Article>
       <Headline>Bildergalerie</Headline>
       <ImageGallery />
+
       <SubHeader>Essen</SubHeader>
-      <Article>
-        <Image
-          src="/Essen.png"
-          width={400}
-          height={300}
-          alt="picture of a meal"
-        />
-        <p>
-          {"Unser Mittagessen wird vom Catering der  "}
 
-          <a href="https://bestellung.h3-schmeckt.de/">H3-Group</a>
-          {" übernommen."}
-        </p>
-        <p>
-          {"Der Speiseplan kann "}
+      <FoodSection>
+        <div>
+          <StyledImage
+            src="/Essen.png"
+            width={400}
+            height={300}
+            alt="picture of a meal"
+          />
+        </div>
+        <div>
+          <p>
+            {"Unser Mittagessen wird vom Catering der  "}
 
-          <a href="https://bestellung.h3-essen.de/">hier</a>
+            <a href="https://bestellung.h3-schmeckt.de/">H3-Group</a>
+            {" übernommen."}
+          </p>
+          <p>
+            {"Der Speiseplan kann "}
 
-          {" nach dem Login eingesehen werden."}
-        </p>
-      </Article>
+            <a href="https://bestellung.h3-essen.de/">hier</a>
+
+            {" nach dem Login eingesehen werden."}
+          </p>
+        </div>
+      </FoodSection>
+
       <SubHeader>Kontakt</SubHeader>
-      <Article>
+
+      <ContactSection>
         <div>
           <p>Haus-Leitung: Lydia Pech</p>
           <p>Stellvertretung: Christiane Günther</p>
-        </div>
-        <div>
           <p>Adresse: Fabrikstraße 11, 08297 Zwönitz</p>
           <p>Telefon: 037754 2855</p>
-          <p>
-            E-Mail:
-            <a href="mailto: kita.sternschnuppe@zwoenitz.de">
-              kita.sternschnuppe@zwoenitz.de
-            </a>
-          </p>
+          E-Mail:
+          <a href="mailto: kita.sternschnuppe@zwoenitz.de">
+            kita.sternschnuppe@zwoenitz.de
+          </a>
         </div>
         <ContactForm />
-      </Article>
+      </ContactSection>
       <Headline>Öffnungszeiten</Headline>
       <Textfield>
         <p>Montag - Freitag:</p>

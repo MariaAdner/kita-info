@@ -1,4 +1,10 @@
-import { StyledForm, StyledLabel, StyledInput } from "./ContactForm.styled";
+import {
+  StyledForm,
+  StyledLabel,
+  StyledInput,
+  StyledInputField,
+  StyledInputCheck,
+} from "./ContactForm.styled";
 import { StyledButton } from "../Button/Button.styled";
 import useSWR from "swr";
 import { useRouter } from "next/router";
@@ -32,15 +38,14 @@ export default function ContactForm() {
   return (
     <StyledForm onSubmit={handleSubmit}>
       <StyledInput>
-        <input
+        <StyledInputField
           type="text"
           id="name"
           name="name"
           placeholder="Name"
-          defaultValue={""}
           required
         />
-        <input
+        <StyledInputField
           type="email"
           id="email"
           name="email"
@@ -48,23 +53,25 @@ export default function ContactForm() {
           required
         />
         <textarea
-          rows="3"
+          rows="5"
           id="message"
           name="message"
           placeholder="Ihre Nachricht oder Frage an uns"
           required
         ></textarea>
       </StyledInput>
-      <StyledLabel>
+      <StyledInputCheck>
         <input
           type="checkbox"
           name="Datenverarbeitung bestätigt"
           value="Ja"
           required
         />
-        Ich bestätige, dass ich mit der Verarbeitung meiner Eingaben zum Zwecke
-        der Anfragebearbeitung, einverstanden bin.
-      </StyledLabel>
+        <StyledLabel>
+          Ich bestätige, dass ich mit der Verarbeitung meiner Eingaben zum
+          Zwecke der Anfragebearbeitung, einverstanden bin.
+        </StyledLabel>
+      </StyledInputCheck>
       <StyledButton type="submit">Senden</StyledButton>
     </StyledForm>
   );

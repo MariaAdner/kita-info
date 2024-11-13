@@ -3,7 +3,7 @@ import {
   Menu,
   MenuLink,
   StyledLink,
-} from "@/components/StyledItem/Item.styled";
+} from "@/components/StyledMenu/Menu.styled";
 import styled from "styled-components";
 
 const StyledGreeting = styled.h4`

@@ -29,15 +29,29 @@ export const Textfield = styled.div`
   }
 `;
 
-export const StyledLogoImage = styled(Image)`
-  border-radius: 20px;
-  display: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  heigth: auto;
+export const StyledImage = styled(Image)`
   @media (min-width: 400px) {
-   float:right;
+    justify-content: center;
   }
+`;
+
+export const ContactSection = styled.article`
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  @media (min-width: 400px) {
+    display: flex;
+    flex-rection: row;
+    padding-left: 150px;
+  }
+`;
+
+export const FoodSection = styled.div`
+  padding: 20px;
+  @media (min-width: 400px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
