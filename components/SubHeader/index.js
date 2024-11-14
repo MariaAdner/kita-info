@@ -1,14 +1,19 @@
 import styled, { css } from "styled-components";
 
 const SubHead = styled.h2`
-  color: var(--color-headline);
   margin-top: 30px;
-  text-align: center;
+
+  ${(props) =>
+    props.$variant === "blue" &&
+    css`
+      color: var(--color-headline);
+    `};
 
   ${(props) =>
     props.$variant === "white" &&
     css`
       color: white;
+      align-items: flex-end;
     `};
 `;
 

@@ -3,8 +3,8 @@ import {
   WelcomeSection,
   Headline,
   Textfield,
-  StyledImage,
-  HeaderImage,
+  FoodImage,
+  WelcomeImage,
   AboutImage,
   ContactSection,
   FoodSection,
@@ -31,7 +31,7 @@ export default function StartPage() {
             mit der Kita zu kommunizieren.
           </p>
         </div>
-        <HeaderImage
+        <WelcomeImage
           src="/spielplatz.png"
           width={300}
           height={250}
@@ -70,11 +70,9 @@ export default function StartPage() {
       <Headline>Bildergalerie</Headline>
       <ImageGallery />
 
-      <SubHeader>Essen</SubHeader>
-
       <FoodSection>
         <div>
-          <StyledImage
+          <FoodImage
             src="/Essen.png"
             width={400}
             height={300}
@@ -82,6 +80,7 @@ export default function StartPage() {
           />
         </div>
         <div>
+          <SubHeader $variant="blue">Essen</SubHeader>
           <p>
             {"Unser Mittagessen wird vom Catering der  "}
 
@@ -98,10 +97,9 @@ export default function StartPage() {
         </div>
       </FoodSection>
 
-      <SubHeader>Kontakt</SubHeader>
-
       <ContactSection>
         <div>
+          <SubHeader $variant="white">Kontakt</SubHeader>
           <p>Haus-Leitung: Lydia Pech</p>
           <p>Stellvertretung: Christiane Günther</p>
           <p>Adresse: Fabrikstraße 11, 08297 Zwönitz</p>

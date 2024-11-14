@@ -16,7 +16,7 @@ export const WelcomeSection = styled.div`
   }
 `;
 
-export const HeaderImage = styled(Image)`
+export const WelcomeImage = styled(Image)`
   border-radius: 200px;
   @media (min-width: 400px) {
     float: left;
@@ -40,12 +40,6 @@ export const Textfield = styled.div`
   }
 `;
 
-export const StyledImage = styled(Image)`
-  @media (min-width: 400px) {
-    justify-content: center;
-  }
-`;
-
 export const ContactSection = styled.article`
   background-color: var(--color-background1);
   color: white;
@@ -65,8 +59,15 @@ export const FoodSection = styled.div`
   padding: 20px;
   @media (min-width: 400px) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+`;
+
+export const FoodImage = styled(Image)`
+  @media (min-width: 400px) {
+    padding-right: 50px;
   }
 `;
 
