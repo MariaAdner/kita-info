@@ -1,14 +1,25 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-export const Article = styled.article`
+export const WelcomeSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
   padding-left: 50px;
   padding-right: 50px;
   @media (min-width: 400px) {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 300px;
+    padding-right: 300px;
+    flex-direction: row;
+  }
+`;
+
+export const HeaderImage = styled(Image)`
+  border-radius: 200px;
+  @media (min-width: 400px) {
+    float: left;
   }
 `;
 
@@ -61,12 +72,25 @@ export const FoodSection = styled.div`
 
 export const AboutUsSection = styled.article`
   background-color: var(--color-background1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
   padding-top: 20px;
   padding-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
   @media (min-width: 400px) {
-    padding-left: 150px;
-    padding-right: 150px;
+    flex-direction: row;
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+`;
+
+export const AboutImage = styled(Image)`
+  object-fit: cover;
+  @media (min-width: 400px) {
+    padding-right: 50px;
+    padding-top: 50px;
   }
 `;
