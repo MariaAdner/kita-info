@@ -40,21 +40,6 @@ export const Textfield = styled.div`
   }
 `;
 
-export const ContactSection = styled.article`
-  background-color: var(--color-background1);
-  color: white;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
-  @media (min-width: 400px) {
-    display: flex;
-    flex-rection: row;
-    justify-content: center;
-    padding-left: 150px;
-  }
-`;
-
 export const FoodSection = styled.div`
   padding: 20px;
   @media (min-width: 400px) {
@@ -94,4 +79,41 @@ export const AboutImage = styled(Image)`
     padding-right: 50px;
     padding-top: 50px;
   }
+`;
+
+export const ContactSection = styled.article`
+  background-color: var(--color-background1);
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  @media (min-width: 400px) {
+    display: flex;
+    flex-rection: row;
+    justify-content: center;
+    padding-left: 150px;
+  }
+`;
+
+export const ContactList = styled.ul`
+  list-style: none;
+  padding: 5px;
+`;
+
+export const ContactListElement = styled.li`
+  padding: 10px;
+  display: flex;
+  align-items: center;
+`;
+
+export const StyledIcon = styled.span`
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+`;
+
+export const StyledContactLink = styled.a`
+  color: white;
+  text-decoration: none;
 `;

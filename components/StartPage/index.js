@@ -9,9 +9,14 @@ import {
   ContactSection,
   FoodSection,
   AboutUsSection,
+  ContactList,
+  ContactListElement,
+  StyledIcon,
+  StyledContactLink,
 } from "./StartPage.styled";
 import ImageGallery from "../ImageGallery";
 import ContactForm from "../ContactForm";
+import { HiOutlineMail, HiPhone, HiOutlineMap } from "react-icons/hi";
 
 export default function StartPage() {
   return (
@@ -102,12 +107,28 @@ export default function StartPage() {
           <SubHeader $variant="white">Kontakt</SubHeader>
           <p>Haus-Leitung: Lydia Pech</p>
           <p>Stellvertretung: Christiane Günther</p>
-          <p>Adresse: Fabrikstraße 11, 08297 Zwönitz</p>
-          <p>Telefon: 037754 2855</p>
-          E-Mail:
-          <a href="mailto: kita.sternschnuppe@zwoenitz.de">
-            kita.sternschnuppe@zwoenitz.de
-          </a>
+          <ContactList>
+            <ContactListElement>
+              <StyledIcon>
+                <HiOutlineMap fontSize={25} />{" "}
+              </StyledIcon>
+              Fabrikstraße 11, 08297 Zwönitz
+            </ContactListElement>
+            <ContactListElement>
+              <StyledIcon>
+                <HiPhone fontSize={25} />{" "}
+              </StyledIcon>
+              037754 2855
+            </ContactListElement>
+            <ContactListElement>
+              <StyledIcon>
+                <HiOutlineMail fontSize={25} />
+              </StyledIcon>
+              <StyledContactLink href="mailto: kita.sternschnuppe@zwoenitz.de">
+                kita.sternschnuppe@zwoenitz.de
+              </StyledContactLink>
+            </ContactListElement>
+          </ContactList>
         </div>
         <ContactForm />
       </ContactSection>
