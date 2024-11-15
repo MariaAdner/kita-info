@@ -4,7 +4,7 @@ import SubHeader from "@/components/SubHeader";
 export default function Login() {
   return (
     <div>
-      <SubHeader>Login</SubHeader>
+      <SubHeader $variant="blue">Login</SubHeader>
       <AuthForm />
     </div>
   );

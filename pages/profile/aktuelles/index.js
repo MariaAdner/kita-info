@@ -5,7 +5,7 @@ import Song from "@/components/Song";
 export default function Aktuelles() {
   return (
     <>
-      <SubHeader>Aktuelles</SubHeader>
+      <SubHeader $variant="menu">Aktuelles</SubHeader>
       <div>
         <Tablesaying />
         <Song />

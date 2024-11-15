@@ -1,7 +1,7 @@
 import SubHeader from "../SubHeader";
+import Headline from "../Headline";
 import {
   WelcomeSection,
-  Headline,
   Textfield,
   FoodImage,
   WelcomeImage,
@@ -13,6 +13,7 @@ import {
   ContactListElement,
   StyledIcon,
   StyledContactLink,
+  ContactStyled,
 } from "./StartPage.styled";
 import ImageGallery from "../ImageGallery";
 import ContactForm from "../ContactForm";
@@ -37,7 +38,7 @@ export default function StartPage() {
           </p>
         </div>
         <WelcomeImage
-          src="/spielplatz.png"
+          src="/spielplatz.jpeg"
           width={300}
           height={250}
           alt="kindergarten außen"
@@ -132,7 +133,7 @@ export default function StartPage() {
         </div>
         <ContactForm />
       </ContactSection>
-      <Headline>Öffnungszeiten</Headline>
+      <Headline $startpage>Öffnungszeiten</Headline>
       <Textfield>
         <p>Montag - Freitag:</p>
         <p>6 - 17 Uhr</p>

@@ -5,8 +5,10 @@ export const StyledForm = styled.form`
   flex-direction: column;
   gap: 5px;
   margin-top: 20px;
+  margin-bottom: 20px;
   @media (min-width: 400px) {
     margin-left: 100px;
+    margin-top: 70px;
   }
 `;
 
@@ -39,4 +41,10 @@ export const StyledTextarea = styled.textarea`
   border-radius: 4px;
   border: 1px solid white;
   font: inherit;
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 `;

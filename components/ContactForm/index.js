@@ -4,6 +4,7 @@ import {
   StyledInput,
   StyledInputField,
   StyledTextarea,
+  ButtonContainer,
 } from "./ContactForm.styled";
 import { StyledButton } from "../Button/Button.styled";
 import useSWR from "swr";
@@ -61,11 +62,11 @@ export default function ContactForm() {
         ></StyledTextarea>
       </StyledInput>
 
-      <div>
+      <ButtonContainer>
         <StyledButton $variant="white" type="submit">
           Senden
         </StyledButton>
-      </div>
+      </ButtonContainer>
     </StyledForm>
   );
 }

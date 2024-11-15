@@ -1,5 +1,6 @@
 import useSWR from "swr";
-import { Headline, Card } from "../Card/Card.styled";
+import { Card } from "../Card/Card.styled";
+import Headline from "../Headline";
 
 export default function Tablesaying() {
   const { data, isLoading } = useSWR("/api/tablesaying");

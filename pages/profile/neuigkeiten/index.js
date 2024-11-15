@@ -5,7 +5,7 @@ export default function Neuigkeiten() {
   return (
     <>
       <div>
-        <SubHeader>Informationen</SubHeader>
+        <SubHeader $variant="menu">Informationen</SubHeader>
         <NewsList />
       </div>
     </>

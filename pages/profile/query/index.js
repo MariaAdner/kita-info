@@ -4,7 +4,7 @@ import SubHeader from "@/components/SubHeader";
 export default function Bedarfsabfragen() {
   return (
     <>
-      <SubHeader>Bedarfsabfragen</SubHeader>
+      <SubHeader $variant="menu">Bedarfsabfragen</SubHeader>
       <QueryList />
     </>
   );

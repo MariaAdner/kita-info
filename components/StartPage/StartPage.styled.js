@@ -23,14 +23,6 @@ export const WelcomeImage = styled(Image)`
   }
 `;
 
-export const Headline = styled.h4`
-  color: var(--color-headline);
-  padding-left: 50px;
-  @media (min-width: 400px) {
-    padding-left: 300px;
-  }
-`;
-
 export const Textfield = styled.div`
   padding-left: 50px;
   padding-bottom: 50px;

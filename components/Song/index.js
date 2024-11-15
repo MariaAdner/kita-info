@@ -1,5 +1,6 @@
 import useSWR from "swr";
-import { Card, CardTitle, Headline } from "../Card/Card.styled";
+import { Card, CardTitle } from "../Card/Card.styled";
+import Headline from "../Headline";
 
 export default function Song() {
   const { data: songs, isLoading } = useSWR("/api/songs");

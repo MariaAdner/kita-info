@@ -1,21 +1,20 @@
 import styled, { css } from "styled-components";
 
-export const Headline = styled.h4`
-  color: var(--color-headline);
-`;
-
 export const Card = styled.ul`
   list-style: none;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   padding: 10px;
   margin-top: 20px;
   margin-bottom: 50px;
-  width: 300px;
+  width: 100%;
+  @media (min-width: 400px) {
+    width; 400px;
+  }
 
   ${(props) =>
     props.$variant === "yellow" &&

@@ -6,6 +6,7 @@ export const StyledButton = styled.button`
   border-color: var(--color-main);
   border-radius: 5px;
   font-weight: bold;
+  font-size: 14px;
   border: none;
   padding: 10px;
 
