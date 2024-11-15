@@ -15,6 +15,7 @@ export default createGlobalStyle`
   --color-background: #eff4ff;
   --color-background1: #88aadd;
   --color-background-list: #FFF5CC;
+  --color-background-list1: #b9d7f9;
   --color-background-item: #ffecb3;
   --color-background-item1: #d3e39c;
   --color-background-text: #afc6e9;

@@ -16,7 +16,7 @@ export const StyledLink = styled(Link)`
   border-radius: 10px;
   list-style: none;
   text-align: center;
-  background-color: var(--color-background-list);
+  background-color: var(--color-background-list1);
   color: darkblue;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   margin: 10px;
   padding: 15px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 `;
 
 export const StyledItem = styled.li``;

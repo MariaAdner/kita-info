@@ -6,20 +6,20 @@ export const Card = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 20px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 70px;
   width: 100%;
   @media (min-width: 400px) {
-    width; 400px;
+    width: 400px;
   }
 
   ${(props) =>
     props.$variant === "yellow" &&
     css`
-      background-color: var(--color-background-item);
+      // background-color: var(--color-background-item);
+      background-color: white;
     `};
 
   ${(props) =>

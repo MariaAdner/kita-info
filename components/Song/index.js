@@ -1,6 +1,8 @@
 import useSWR from "swr";
 import { Card, CardTitle } from "../Card/Card.styled";
 import MenuHeadline from "../MenuHeadline";
+import Container from "../Container";
+import { GiLoveSong } from "react-icons/gi";
 
 export default function Song() {
   const { data: songs, isLoading } = useSWR("/api/songs");
@@ -15,15 +17,18 @@ export default function Song() {
 
   return (
     <>
-      <MenuHeadline>Das Lied, das wir gerade singen: </MenuHeadline>
-      <Card $variant="yellow">
-        {songs.map(({ _id, title, description }) => (
-          <li key={_id}>
-            <CardTitle>{title}</CardTitle>
-            <p dangerouslySetInnerHTML={{ __html: description }}></p>
-          </li>
-        ))}
-      </Card>
+      <Container $variant="blue">
+        <GiLoveSong fontSize={50} color="var(--color-headline)" />
+        <MenuHeadline>Das Lied, das wir gerade singen: </MenuHeadline>
+        <Card $variant="yellow">
+          {songs.map(({ _id, title, description }) => (
+            <li key={_id}>
+              <CardTitle>{title}</CardTitle>
+              <p dangerouslySetInnerHTML={{ __html: description }}></p>
+            </li>
+          ))}
+        </Card>
+      </Container>
     </>
   );
 }
