@@ -7,6 +7,7 @@ export const StyledList = styled.ul`
   flex-direction: column;
   justify-content: center;
   padding-left: 0;
+  margin-bottom: 70px;
 `;
 
 export const StyledLink = styled(Link)`

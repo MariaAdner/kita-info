@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const HeadlineStyled = styled.h4`
   color: var(--color-headline);

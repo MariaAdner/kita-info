@@ -10,7 +10,7 @@ export const Card = styled.ul`
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   padding: 10px;
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   width: 100%;
   @media (min-width: 400px) {
     width; 400px;

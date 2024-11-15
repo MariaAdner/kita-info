@@ -8,6 +8,7 @@ export const Menu = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   padding-left: 0;
+  margin-bottom: 70px;
 `;
 
 export const MenuLink = styled.li`

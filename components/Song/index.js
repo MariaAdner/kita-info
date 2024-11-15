@@ -1,6 +1,6 @@
 import useSWR from "swr";
 import { Card, CardTitle } from "../Card/Card.styled";
-import Headline from "../Headline";
+import MenuHeadline from "../MenuHeadline";
 
 export default function Song() {
   const { data: songs, isLoading } = useSWR("/api/songs");
@@ -15,7 +15,7 @@ export default function Song() {
 
   return (
     <>
-      <Headline>Das Lied, das wir gerade singen: </Headline>
+      <MenuHeadline>Das Lied, das wir gerade singen: </MenuHeadline>
       <Card $variant="yellow">
         {songs.map(({ _id, title, description }) => (
           <li key={_id}>

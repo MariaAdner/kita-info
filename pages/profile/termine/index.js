@@ -1,5 +1,5 @@
 import SubHeader from "@/components/SubHeader";
-import Headline from "@/components/Headline";
+import MenuHeadline from "@/components/MenuHeadline";
 import EventsList from "@/components/EventsList";
 import Schließzeiten from "@/components/Schließzeiten";
 
@@ -7,9 +7,9 @@ export default function Dates() {
   return (
     <>
       <SubHeader $variant="menu">Termine</SubHeader>
-      <Headline>Schließzeiten</Headline>
+      <MenuHeadline>Schließzeiten</MenuHeadline>
       <Schließzeiten />
-      <h4>Veranstaltungen</h4>
+      <MenuHeadline>Veranstaltungen</MenuHeadline>
       <EventsList />
     </>
   );

@@ -1,6 +1,6 @@
 import useSWR from "swr";
 import { Card } from "../Card/Card.styled";
-import Headline from "../Headline";
+import MenuHeadline from "../MenuHeadline";
 
 export default function Tablesaying() {
   const { data, isLoading } = useSWR("/api/tablesaying");
@@ -15,7 +15,7 @@ export default function Tablesaying() {
 
   return (
     <>
-      <Headline>Unser Tischspruch</Headline>
+      <MenuHeadline>Unser Tischspruch</MenuHeadline>
       <Card $variant="green">
         {data.map(({ _id, description }) => (
           <li key={_id}>
