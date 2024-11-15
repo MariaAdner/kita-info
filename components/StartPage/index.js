@@ -18,6 +18,7 @@ import {
 import ImageGallery from "../ImageGallery";
 import ContactForm from "../ContactForm";
 import { HiOutlineMail, HiPhone, HiOutlineMap } from "react-icons/hi";
+import ImageCarousel from "../ImageCarousel";
 
 export default function StartPage() {
   return (
@@ -74,7 +75,7 @@ export default function StartPage() {
         </div>
       </AboutUsSection>
       <Headline>Bildergalerie</Headline>
-      <ImageGallery />
+      <ImageCarousel />
 
       <FoodSection>
         <div>
