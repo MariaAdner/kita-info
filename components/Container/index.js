@@ -20,6 +20,12 @@ const Container = styled.section`
     css`
       background-color: var(--color-background1);
     `};
+
+  ${(props) =>
+    props.$variant === "yellow" &&
+    css`
+      background-color: var(--color-background-item);
+    `};
 `;
 
 export default Container;

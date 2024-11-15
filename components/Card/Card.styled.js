@@ -18,14 +18,19 @@ export const Card = styled.ul`
   ${(props) =>
     props.$variant === "yellow" &&
     css`
-      // background-color: var(--color-background-item);
-      background-color: white;
+      background-color: var(--color-background-item);
     `};
 
   ${(props) =>
     props.$variant === "green" &&
     css`
       background-color: var(--color-background-item1);
+    `};
+
+  ${(props) =>
+    props.$variant === "white" &&
+    css`
+      background-color: white;
     `};
 `;
 

@@ -17,10 +17,10 @@ export default function Song() {
 
   return (
     <>
-      <Container $variant="blue">
+      <Container $variant="yellow">
         <GiLoveSong fontSize={50} color="var(--color-headline)" />
         <MenuHeadline>Das Lied, das wir gerade singen: </MenuHeadline>
-        <Card $variant="yellow">
+        <Card $variant="white">
           {songs.map(({ _id, title, description }) => (
             <li key={_id}>
               <CardTitle>{title}</CardTitle>

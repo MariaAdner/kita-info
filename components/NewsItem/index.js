@@ -18,7 +18,7 @@ export default function NewsItem() {
 
   return (
     <>
-      <Card $variant="yellow">
+      <Card $variant="white">
         <CardTitle>{data.title}</CardTitle>
         <CardText dangerouslySetInnerHTML={{ __html: data.text }}></CardText>
         <CardDate>{data.date}</CardDate>

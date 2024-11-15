@@ -20,7 +20,7 @@ export default function Tablesaying() {
       <Container $variant="color">
         <GiMeal fontSize={50} color="var(--color-headline)" />
         <MenuHeadline>Unser Tischspruch</MenuHeadline>
-        <Card $variant="green">
+        <Card $variant="yellow">
           {data.map(({ _id, description }) => (
             <li key={_id}>
               <p dangerouslySetInnerHTML={{ __html: description }}></p>
