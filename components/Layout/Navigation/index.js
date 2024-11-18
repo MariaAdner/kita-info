@@ -14,14 +14,14 @@ export default function Navigation() {
   return (
     <StyledNavigation>
       <StyledNavigationButton onClick={() => router.push("/")}>
-        <HiHome size={20} />
+        <HiHome size={25} />
       </StyledNavigationButton>
       <StyledNavigationLink href="/">
         {router.pathname !== "/" &&
           router.pathname !== "/profile/thanks" &&
           router.pathname !== "/profile" && (
             <StyledNavigationButton onClick={() => router.back()}>
-              <HiArrowNarrowLeft size={20} />
+              <HiArrowNarrowLeft size={25} />
             </StyledNavigationButton>
           )}
       </StyledNavigationLink>
@@ -29,7 +29,7 @@ export default function Navigation() {
         ? router.pathname !== "/profile" && (
             <StyledNavigationLink href="/profile">
               <StyledNavigationButton>
-                <HiOutlineUser size={20} />
+                <HiOutlineUser size={25} />
               </StyledNavigationButton>
             </StyledNavigationLink>
           )

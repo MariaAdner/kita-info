@@ -84,7 +84,7 @@ export const ContactSection = styled.article`
     display: flex;
     flex-rection: row;
     justify-content: center;
-    padding-left: 150px;
+    padding-left: 100px;
   }
 `;
 

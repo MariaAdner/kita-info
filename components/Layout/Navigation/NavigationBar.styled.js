@@ -22,4 +22,9 @@ export const StyledNavigationButton = styled.button`
   background-color: var(--color-main);
   color: white;
   border: none;
+  font-size: 18px;
+  font-weight: 700;
+  &:hover {
+    background-color: var(--color-headline);
+  }
 `;

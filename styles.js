@@ -31,7 +31,7 @@ export default createGlobalStyle`
     display: grid;
     place-items: center;
     font-family:  ${kitaInfoFont.style.fontFamily};
-    line-height: 125%;
+    line-height: 150%;
     background-color: var(--color-background);
     margin:0;
   }

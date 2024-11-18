@@ -25,7 +25,6 @@ export default function ImageCarousel() {
         autoPlay={true}
         interval={3000}
         infiniteLoop={true}
-        showThumbs={false}
       >
         <div>
           <Image
@@ -34,6 +33,7 @@ export default function ImageCarousel() {
             width={300}
             alt={"Gruppenraum 1"}
           />
+          <p className="legend">Legend 1</p>
         </div>
         <div>
           <Image
