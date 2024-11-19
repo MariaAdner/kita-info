@@ -43,6 +43,13 @@ export const CardDate = styled.p`
   margin: 10px;
   font-style: italic;
   font-weight: lighter;
+
+  ${(props) =>
+    props.$variant === "event" &&
+    css`
+      font-weight: bold;
+      font-style: normal;
+    `};
 `;
 
 export const CardText = styled.p`

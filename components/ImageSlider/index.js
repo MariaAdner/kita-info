@@ -11,6 +11,7 @@ import {
   EmblaButtonNext,
   EmblaButtonMenu,
 } from "./ImageSlider.styled";
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
 
 export default function ImageSlider() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
@@ -26,16 +27,12 @@ export default function ImageSlider() {
   }, [emblaApi]);
 
   const sliderImages = [
-    // {
-    //   name: "Garderobe",
-    //   path: "/garderobe.png",
-    // },
-
-    // { name: "Gruppenraum", path: "/gruppenraum.png" },
+    { name: "Garderobe", path: "/garderobe.png" },
     { name: "Gruppenraum1", path: "/gruppenraum1.jpeg" },
-    // { name: "Gruppenraum2", path: "/gruppenraum2.jpeg" },
     { name: "Außengelände1", path: "/spielplatz1.jpeg" },
-    { name: "Außengelände2", path: "/außenbereich.jpeg" },
+    { name: "Außengelände2", path: "/spielplatz2.jpg" },
+    { name: "Außengelände3", path: "/spielplatz3.jpg" },
+    { name: "Außengelände4", path: "/außenbereich.jpeg" },
   ];
 
   return (
@@ -55,8 +52,12 @@ export default function ImageSlider() {
         </StyledEmblaContainer>
       </StyledViewport>
       <EmblaButtonMenu>
-        <EmblaButtonPrev onClick={scrollPrev}>Prev</EmblaButtonPrev>
-        <EmblaButtonNext onClick={scrollNext}>Next</EmblaButtonNext>
+        <EmblaButtonPrev onClick={scrollPrev}>
+          <HiOutlineChevronLeft size={25} />
+        </EmblaButtonPrev>
+        <EmblaButtonNext onClick={scrollNext}>
+          <HiOutlineChevronRight size={25} />
+        </EmblaButtonNext>
       </EmblaButtonMenu>
     </StyledEmbla>
   );

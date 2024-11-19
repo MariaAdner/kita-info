@@ -14,7 +14,7 @@ import { IoInformationCircleOutline } from "react-icons/io5";
 
 const StyledGreeting = styled.h4`
   font-weight: 300;
-  text-color: var (--color-text);
+  color: var(--color-headline);
   padding-left: 30px;
 `;
 

@@ -25,11 +25,19 @@ export const StyledEmblaImage = styled(Image)`
 `;
 
 export const EmblaButtonPrev = styled.button`
-  padding: 10px;
+  background-color: var(--color-main);
+  color: white;
+  border-color: var(--color-main);
+  border-radius: 5px;
+  border: none;
 `;
 
 export const EmblaButtonNext = styled.button`
-  padding: 10px;
+  background-color: var(--color-main);
+  color: white;
+  border-color: var(--color-main);
+  border-radius: 5px;
+  border: none;
 `;
 
 export const EmblaButtonMenu = styled.div`

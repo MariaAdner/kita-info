@@ -20,10 +20,13 @@ export default function NewsItem() {
     <>
       <Card $variant="green">
         <CardTitle>{data.title}</CardTitle>
+        <CardDate $variant="event">
+          Wann?{"       "}
+          {data.date}
+        </CardDate>
         <CardText
           dangerouslySetInnerHTML={{ __html: data.description }}
         ></CardText>
-        <CardDate>{data.date}</CardDate>
       </Card>
     </>
   );
