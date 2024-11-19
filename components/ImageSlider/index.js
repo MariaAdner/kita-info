@@ -1,18 +1,29 @@
-import React from "react";
+import React, { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import {
   StyledEmbla,
+  StyledViewport,
   StyledEmblaContainer,
   StyledSlide,
   StyledEmblaImage,
+  EmblaButtonPrev,
+  EmblaButtonNext,
+  EmblaButtonMenu,
 } from "./ImageSlider.styled";
-import Image from "next/image";
 
 export default function ImageSlider() {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 4000 }),
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 6000 }),
   ]);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   const sliderImages = [
     // {
@@ -28,19 +39,25 @@ export default function ImageSlider() {
   ];
 
   return (
-    <StyledEmbla ref={emblaRef}>
-      <StyledEmblaContainer>
-        {sliderImages.map((image) => (
-          <StyledSlide key={image.name}>
-            <StyledEmblaImage
-              src={image.path}
-              width={350}
-              height={275}
-              alt={image.name}
-            />
-          </StyledSlide>
-        ))}
-      </StyledEmblaContainer>
+    <StyledEmbla>
+      <StyledViewport ref={emblaRef}>
+        <StyledEmblaContainer>
+          {sliderImages.map((image) => (
+            <StyledSlide key={image.name}>
+              <StyledEmblaImage
+                src={image.path}
+                width={350}
+                height={275}
+                alt={image.name}
+              />
+            </StyledSlide>
+          ))}
+        </StyledEmblaContainer>
+      </StyledViewport>
+      <EmblaButtonMenu>
+        <EmblaButtonPrev onClick={scrollPrev}>Prev</EmblaButtonPrev>
+        <EmblaButtonNext onClick={scrollNext}>Next</EmblaButtonNext>
+      </EmblaButtonMenu>
     </StyledEmbla>
   );
 }

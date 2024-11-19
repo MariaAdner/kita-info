@@ -23,6 +23,13 @@ export const WelcomeImage = styled(Image)`
   }
 `;
 
+export const ImageSection = styled.div`
+  width: 400px;
+  @media (min-width: 400px) {
+    width: 100%;
+  }
+`;
+
 export const Textfield = styled.div`
   padding-left: 50px;
   padding-bottom: 50px;

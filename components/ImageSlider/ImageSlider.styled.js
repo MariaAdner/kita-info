@@ -2,6 +2,10 @@ import styled from "styled-components";
 import Image from "next/image";
 
 export const StyledEmbla = styled.div`
+  margin: 50px;
+`;
+
+export const StyledViewport = styled.div`
   overflow: hidden;
 `;
 
@@ -18,4 +22,20 @@ export const StyledSlide = styled.div`
 
 export const StyledEmblaImage = styled(Image)`
   width: 375px;
+`;
+
+export const EmblaButtonPrev = styled.button`
+  padding: 10px;
+`;
+
+export const EmblaButtonNext = styled.button`
+  padding: 10px;
+`;
+
+export const EmblaButtonMenu = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px;
+  gap: 10px;
 `;

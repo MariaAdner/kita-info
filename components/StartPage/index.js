@@ -13,9 +13,9 @@ import {
   ContactListElement,
   StyledIcon,
   StyledContactLink,
+  ImageSection,
   ContactStyled,
 } from "./StartPage.styled";
-import ImageGallery from "../ImageGallery";
 import ContactForm from "../ContactForm";
 import { HiOutlineMail, HiPhone, HiOutlineMap } from "react-icons/hi";
 import Transition from "../Layout/Transition";
@@ -82,11 +82,12 @@ export default function StartPage() {
         </AboutUsSection>
       </Transition>
 
-      <Headline>Bildergalerie</Headline>
-
-      {/* <ImageCarousel /> */}
-      {/* <ImageGallery /> */}
-      <ImageSlider />
+      <Transition>
+        <Headline>Bildergalerie</Headline>
+        <ImageSection>
+          <ImageSlider />
+        </ImageSection>
+      </Transition>
 
       <Transition>
         <FoodSection>
