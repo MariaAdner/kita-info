@@ -4,7 +4,7 @@
 
 Web Application for the Kindergarten Sternschnuppe: Parents can get informations about
 
-![alt text](image.png)
+![alt text](image.png)| width=100
 
 ### Local Development
 
