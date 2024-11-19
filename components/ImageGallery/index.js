@@ -10,7 +10,6 @@ const images = [
   { name: "Gruppenraum", path: "/gruppenraum.png" },
   { name: "Gruppenraum1", path: "/gruppenraum1.jpeg" },
   { name: "Gruppenraum2", path: "/gruppenraum2.jpeg" },
-  { name: "Außengelände", path: "/spielplatz.png" },
   { name: "Außengelände1", path: "/spielplatz1.jpeg" },
   { name: "Außengelände2", path: "/außenbereich.jpeg" },
 ];

@@ -1,10 +1,10 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Image from "next/image";
-import { StyledCarousel } from "./ImageCarousel.styled";
+import { StyledCarousel, StyledCarouselImage } from "./ImageCarousel.styled";
 
 export default function ImageCarousel() {
-  const carouselimages = [
+  const carouselImages = [
     {
       name: "Garderobe",
       path: "/garderobe.png",
@@ -13,7 +13,6 @@ export default function ImageCarousel() {
     { name: "Gruppenraum", path: "/gruppenraum.png" },
     { name: "Gruppenraum1", path: "/gruppenraum1.jpeg" },
     { name: "Gruppenraum2", path: "/gruppenraum2.jpeg" },
-    { name: "Außengelände", path: "/spielplatz.png" },
     { name: "Außengelände1", path: "/spielplatz1.jpeg" },
     { name: "Außengelände2", path: "/außenbereich.jpeg" },
   ];
@@ -22,43 +21,40 @@ export default function ImageCarousel() {
     <StyledCarousel>
       <Carousel
         showArrows={true}
+        showStatus={false}
         autoPlay={true}
         interval={3000}
         infiniteLoop={true}
+        emulateTouch={true}
+        transitionTime={3}
+        showThumbs={true}
+        dynamicHeight={true}
       >
         <div>
-          <Image
-            src={"/gruppenraum.png"}
-            height={250}
-            width={300}
-            alt={"Gruppenraum 1"}
-          />
-          <p className="legend">Legend 1</p>
+          <Image src={"/garderobe.png"} width={350} height={275} alt="ddd" />
+        </div>
+        <div>
+          <Image src="/gruppenraum.png" width={350} height={275} alt="ddd" />
         </div>
         <div>
           <Image
             src={"/gruppenraum1.jpeg"}
-            height={250}
-            width={300}
-            alt={"Gruppenraum 2"}
+            width={350}
+            height={275}
+            alt="ddd"
           />
         </div>
-        <div>
-          <Image
-            src={"/spielplatz.png"}
-            height={250}
-            width={300}
-            alt={"Außengeländer 1"}
-          />
-        </div>
-        <div>
-          <Image
-            src={"/spielplatz1.jpeg"}
-            height={250}
-            width={300}
-            alt={"Außengeländer 2"}
-          />
-        </div>
+
+        {/* {carouselImages.map((image) => (
+          <li key={image.name}>
+            <StyledCarouselImage
+              src={image.path}
+              height={275}
+              width={350}
+              alt={image.name}
+            />
+          </li>
+        ))} */}
       </Carousel>
     </StyledCarousel>
   );
