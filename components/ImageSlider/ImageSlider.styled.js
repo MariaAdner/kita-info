@@ -25,17 +25,17 @@ export const StyledEmblaImage = styled(Image)`
 `;
 
 export const EmblaButtonPrev = styled.button`
-  background-color: var(--color-main);
+  background-color: var(--color-background1);
   color: white;
-  border-color: var(--color-main);
+  border-color: var(--color-background1);
   border-radius: 5px;
   border: none;
 `;
 
 export const EmblaButtonNext = styled.button`
-  background-color: var(--color-main);
+  background-color: var(--color-background1);
   color: white;
-  border-color: var(--color-main);
+  border-color: var(--color-background1);
   border-radius: 5px;
   border: none;
 `;

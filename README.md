@@ -4,6 +4,8 @@
 
 Web Application for the Kindergarten Sternschnuppe: Parents can get informations about
 
+![alt text](image.png)
+
 ### Local Development
 
 To work locally, please install the dependencies using `npm i` first.
