@@ -1,25 +1,25 @@
-# New Next Project - Kita-Info
+# Kita-Info-App
 
 ### Description
 
-Web Application for the Kindergarten Sternschnuppe: Parents can get informations about
+The Kita-Info-App consists of a webpage about the Kindergarten Sternschnuppe and a web application with a login for parents to get important informations, news and events from daycare.
 
-![alt text](image.png| width=200)
+The Kita-Info-App makes the communication between the kindergarten and the parents easier without any bureacratic effort.
+
+### Technologies & Tools
+
+React
+
+Next.Js
+
+Styled Components
+
+MongoDB
 
 ### Local Development
 
-To work locally, please install the dependencies using `npm i` first.
+To work locally, please clone this repository to your local machine andinstall the dependencies using `npm i` first.
 
 Run `npm run dev` to start a development server and open the displayed URL in a browser.
 
 Use `npm run test` to run the tests.
-
-### Scripts
-
-You can use the following commands:
-
-- `npm run dev` to start a development server
-- `npm run build` to build the project
-- `npm run start` to start a production server
-- `npm run test` to run the tests
-- `npm run lint` to run the linter
