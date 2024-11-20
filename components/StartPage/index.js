@@ -14,7 +14,7 @@ import {
   StyledIcon,
   StyledContactLink,
   ImageSection,
-  ContactStyled,
+  ContactData,
 } from "./StartPage.styled";
 import ContactForm from "../ContactForm";
 import { HiOutlineMail, HiPhone, HiOutlineMap } from "react-icons/hi";
@@ -119,7 +119,7 @@ export default function StartPage() {
       </Transition>
       <Transition>
         <ContactSection>
-          <div>
+          <ContactData>
             <SubHeader $variant="white">Kontakt</SubHeader>
             <p>Haus-Leitung: Lydia Pech</p>
             <p>Stellvertretung: Christiane Günther</p>
@@ -145,7 +145,7 @@ export default function StartPage() {
                 </StyledContactLink>
               </ContactListElement>
             </ContactList>
-          </div>
+          </ContactData>
           <ContactForm />
         </ContactSection>
       </Transition>

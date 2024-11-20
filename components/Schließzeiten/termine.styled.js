@@ -11,7 +11,7 @@ export const StyledTable = styled.table`
   align-items: center;
   font-size: 11pt;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     width: 700px;
     padding: 20px;
   }

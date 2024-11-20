@@ -2,7 +2,10 @@ import styled from "styled-components";
 import Image from "next/image";
 
 export const StyledEmbla = styled.div`
-  margin: 50px;
+  margin: auto;
+  --slide-height: 19rem;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
 `;
 
 export const StyledViewport = styled.div`
@@ -11,6 +14,8 @@ export const StyledViewport = styled.div`
 
 export const StyledEmblaContainer = styled.div`
   display: flex;
+  margin-left: calc(var(--slide-spacing) * -1);
+  width: 450px;
 `;
 export const StyledSlide = styled.div`
   flex: 0 0 100%;

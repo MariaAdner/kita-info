@@ -9,7 +9,12 @@ export const WelcomeSection = styled.div`
   padding-bottom: 50px;
   padding-left: 50px;
   padding-right: 50px;
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
+    padding-left: 200px;
+    padding-right: 200px;
+    flex-direction: row;
+  }
+  @media (min-width: 1200px) {
     padding-left: 300px;
     padding-right: 300px;
     flex-direction: row;
@@ -18,14 +23,21 @@ export const WelcomeSection = styled.div`
 
 export const WelcomeImage = styled(Image)`
   border-radius: 200px;
-  @media (min-width: 400px) {
-    float: left;
+  margin-top: 20px;
+  @media (min-width: 450px) {
+    margin-left: 20px;
+  }
+  @media (min-width: 1200px) {
+    margin-left: 20px;
   }
 `;
 
 export const ImageSection = styled.div`
-  width: 400px;
-  @media (min-width: 400px) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 450px) {
     width: 100%;
   }
 `;
@@ -33,7 +45,7 @@ export const ImageSection = styled.div`
 export const Textfield = styled.div`
   padding-left: 50px;
   padding-bottom: 50px;
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     padding-left: 300px;
     padding-right: 150px;
   }
@@ -41,7 +53,13 @@ export const Textfield = styled.div`
 
 export const FoodSection = styled.div`
   padding: 20px;
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
+    display: flex;
+    flex-direction: row;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  @media (min-width: 1200px) {
     display: flex;
     flex-direction: row;
     padding-left: 300px;
@@ -50,7 +68,7 @@ export const FoodSection = styled.div`
 `;
 
 export const FoodImage = styled(Image)`
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     padding-right: 50px;
   }
 `;
@@ -65,7 +83,12 @@ export const AboutUsSection = styled.article`
   padding-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
+    flex-direction: row;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  @media (min-width: 1200px) {
     flex-direction: row;
     padding-left: 300px;
     padding-right: 300px;
@@ -74,7 +97,7 @@ export const AboutUsSection = styled.article`
 
 export const AboutImage = styled(Image)`
   object-fit: cover;
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     padding-right: 50px;
     padding-top: 50px;
   }
@@ -87,7 +110,8 @@ export const ContactSection = styled.article`
   padding-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
-  @media (min-width: 400px) {
+
+  @media (min-width: 450px) {
     display: flex;
     flex-rection: row;
     justify-content: center;
@@ -98,6 +122,10 @@ export const ContactSection = styled.article`
 export const ContactList = styled.ul`
   list-style: none;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
 `;
 
 export const ContactListElement = styled.li`
@@ -115,4 +143,16 @@ export const StyledIcon = styled.span`
 export const StyledContactLink = styled.a`
   color: white;
   text-decoration: none;
+`;
+
+export const ContactData = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 400px;
+
+  @media (min-width: 450px) {
+    margin: 20px;
+  }
 `;

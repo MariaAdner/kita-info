@@ -6,9 +6,8 @@ export const StyledForm = styled.form`
   gap: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
-  @media (min-width: 400px) {
-    margin-left: 100px;
-    margin-top: 70px;
+  @media (min-width: 450px) {
+    margin-top: 120px;
   }
 `;
 
@@ -24,7 +23,7 @@ export const StyledInput = styled.div`
   gap: 10px;
   width: 100%;
   margin-bottom: 10px;
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     width: 500px;
   }
 `;
