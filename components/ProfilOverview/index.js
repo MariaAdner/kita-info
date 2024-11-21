@@ -11,6 +11,7 @@ import {
   HiOutlineClipboardDocumentCheck,
 } from "react-icons/hi2";
 import { IoInformationCircleOutline } from "react-icons/io5";
+import Container from "../Container";
 
 const StyledGreeting = styled.h4`
   font-weight: 300;
@@ -65,5 +66,12 @@ export default function ProfileOverview() {
           </StyledLink>
         </Menu>
       </div>
+    );
+
+  if (!session)
+    return (
+      <Container>
+        <h3>Bitte loggen Sie sich ein.</h3>
+      </Container>
     );
 }

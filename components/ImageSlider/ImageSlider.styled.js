@@ -27,6 +27,10 @@ export const StyledSlide = styled.div`
 
 export const StyledEmblaImage = styled(Image)`
   width: 375px;
+  @media (min-width: 450px) {
+    width: 500px;
+    height: 380px;
+  }
 `;
 
 export const EmblaButtonPrev = styled.button`

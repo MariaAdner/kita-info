@@ -15,6 +15,7 @@ import {
   StyledContactLink,
   ImageSection,
   ContactData,
+  AboutUsStyled,
 } from "./StartPage.styled";
 import ContactForm from "../ContactForm";
 import { HiOutlineMail, HiPhone, HiOutlineMap } from "react-icons/hi";
@@ -52,42 +53,43 @@ export default function StartPage() {
 
       <Transition>
         <AboutUsSection>
-          <AboutImage
-            src="/spielen.jpg"
-            width={300}
-            height={300}
-            alt="spielendes kind"
-          />
-          <div>
-            <SubHeader $variant="white">Über uns</SubHeader>
-            <p>
-              Die Kita Sternschnuppe befindet sich im Zwönitzer Ortsteil
-              Dorfchemnitz. Auf 400 Quaddrametern bietet die Einrichtung Platz
-              für insgesamt 75 Kinder.
-            </p>
-            <p>
-              Im Erdgeschoss gibt es eine große Garderobe und die Räume der
-              Vorschulgruppe. Im Obergeschoss sind die Räume der Krippe und die
-              Gruppenräume der Kindergartenkinder. In jeder Gruppe gibt es
-              themenbezogene Räume zum Bauen und Konstruieren, Enstpannen,
-              Basteln und Essen.
-            </p>
-            <p>
-              Das Außengelände ist unterteilt in Krippe und Kindergarten. Es
-              gibt eine große Sandlandschaft sowie zwei Klettergerüste. Die
-              Kinder können zudem verschiedene Fahrzeuge aus dem Geräteschuppen
-              benutzen.
-            </p>
-          </div>
+          <AboutUsStyled>
+            <AboutImage
+              src="/spielen.jpg"
+              width={300}
+              height={300}
+              alt="spielendes kind"
+            />
+            <div>
+              <SubHeader $variant="white">Über uns</SubHeader>
+              <p>
+                Die Kita Sternschnuppe befindet sich im Zwönitzer Ortsteil
+                Dorfchemnitz. Auf 400 Quaddrametern bietet die Einrichtung Platz
+                für insgesamt 75 Kinder.
+              </p>
+              <p>
+                Im Erdgeschoss gibt es eine große Garderobe und die Räume der
+                Vorschulgruppe. Im Obergeschoss sind die Räume der Krippe und
+                die Gruppenräume der Kindergartenkinder. In jeder Gruppe gibt es
+                themenbezogene Räume zum Bauen und Konstruieren, Enstpannen,
+                Basteln und Essen.
+              </p>
+              <p>
+                Das Außengelände ist unterteilt in Krippe und Kindergarten. Es
+                gibt eine große Sandlandschaft sowie zwei Klettergerüste. Die
+                Kinder können zudem verschiedene Fahrzeuge aus dem
+                Geräteschuppen benutzen.
+              </p>
+            </div>
+          </AboutUsStyled>
+          <Headline $variant="blue">Bildergalerie</Headline>
+          <ImageSection>
+            <ImageSlider />
+          </ImageSection>
         </AboutUsSection>
       </Transition>
 
-      <Transition>
-        <Headline>Bildergalerie</Headline>
-        <ImageSection>
-          <ImageSlider />
-        </ImageSection>
-      </Transition>
+      <Transition></Transition>
 
       <Transition>
         <FoodSection>
@@ -121,24 +123,26 @@ export default function StartPage() {
         <ContactSection>
           <ContactData>
             <SubHeader $variant="white">Kontakt</SubHeader>
-            <p>Haus-Leitung: Lydia Pech</p>
-            <p>Stellvertretung: Christiane Günther</p>
+            <div>
+              <p>Haus-Leitung: Lydia Pech</p>
+              <p>Stellvertretung: Christiane Günther</p>
+            </div>
             <ContactList>
               <ContactListElement>
                 <StyledIcon>
-                  <HiOutlineMap fontSize={25} />{" "}
+                  <HiOutlineMap fontSize={30} />{" "}
                 </StyledIcon>
                 Fabrikstraße 11, 08297 Zwönitz
               </ContactListElement>
               <ContactListElement>
                 <StyledIcon>
-                  <HiPhone fontSize={25} />{" "}
+                  <HiPhone fontSize={30} />{" "}
                 </StyledIcon>
                 037754 2855
               </ContactListElement>
               <ContactListElement>
                 <StyledIcon>
-                  <HiOutlineMail fontSize={25} />
+                  <HiOutlineMail fontSize={30} />
                 </StyledIcon>
                 <StyledContactLink href="mailto: kita.sternschnuppe@zwoenitz.de">
                   kita.sternschnuppe@zwoenitz.de
@@ -151,8 +155,10 @@ export default function StartPage() {
       </Transition>
       <Headline $startpage>Öffnungszeiten</Headline>
       <Textfield>
-        <p>Montag - Freitag:</p>
-        <p>6 - 17 Uhr</p>
+        <div>
+          <p>Montag - Freitag:</p>
+          <p>6:00 - 16:30 Uhr</p>
+        </div>
       </Textfield>
     </>
   );

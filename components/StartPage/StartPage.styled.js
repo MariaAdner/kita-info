@@ -33,6 +33,7 @@ export const WelcomeImage = styled(Image)`
 `;
 
 export const ImageSection = styled.div`
+  background-color: var(--color-background1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,13 +47,17 @@ export const Textfield = styled.div`
   padding-left: 50px;
   padding-bottom: 50px;
   @media (min-width: 450px) {
+    padding-left: 200px;
+    padding-right: 150px;
+  }
+  @media (min-width: 1200px) {
     padding-left: 300px;
     padding-right: 150px;
   }
 `;
 
 export const FoodSection = styled.div`
-  padding: 20px;
+  padding: 50px;
   @media (min-width: 450px) {
     display: flex;
     flex-direction: row;
@@ -84,14 +89,24 @@ export const AboutUsSection = styled.article`
   padding-left: 50px;
   padding-right: 50px;
   @media (min-width: 450px) {
-    flex-direction: row;
+    flex-direction: column;
     padding-left: 200px;
     padding-right: 200px;
   }
   @media (min-width: 1200px) {
-    flex-direction: row;
+    flex-direction: column;
     padding-left: 300px;
     padding-right: 300px;
+  }
+`;
+
+export const AboutUsStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 450px) {
+    display: flex;
+    flex-direction: row;
   }
 `;
 
@@ -129,7 +144,7 @@ export const ContactList = styled.ul`
 `;
 
 export const ContactListElement = styled.li`
-  padding: 10px;
+  padding: 5px;
   display: flex;
   align-items: center;
 `;
@@ -138,6 +153,7 @@ export const StyledIcon = styled.span`
   display: inline-block;
   width: 40px;
   text-align: center;
+  padding-right: 20px;
 `;
 
 export const StyledContactLink = styled.a`

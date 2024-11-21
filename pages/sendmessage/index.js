@@ -1,12 +1,14 @@
 import Link from "next/link";
+import { StyledButton } from "@/components/Button/Button.styled";
+import Container from "@/components/Container";
 
 export default function SendMessage() {
   return (
-    <div>
+    <Container>
       <p>Vielen Dank wir haben Ihre Nachricht erhalten!</p>
       <Link href="/">
-        <button>Zurück zur Startseite</button>
+        <StyledButton>Zurück zur Startseite</StyledButton>
       </Link>
-    </div>
+    </Container>
   );
 }
