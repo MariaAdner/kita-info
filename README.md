@@ -2,6 +2,8 @@
 
 ### Description
 
+![alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/maria/Documents/Projekte/kita-info/public/KitaInfo-Overview.png?version%3D1732193387175)
+
 The Kita-Info-App consists of a webpage about the Kindergarten Sternschnuppe and a web application with a login for parents to get important informations, news and events from daycare.
 
 The Kita-Info-App makes the communication between the kindergarten and the parents easier without any bureacratic effort.
