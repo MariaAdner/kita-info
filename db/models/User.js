@@ -7,7 +7,7 @@ const userSchema = new Schema({
   name: { type: String, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
-  queryanswer: { type: [Schema.Types.ObjectId], ref: "Query" },
+  querys: [{ type: Schema.Types.ObjectId, ref: "Query" }],
 });
 
 const User = mongoose.models.User || mongoose.model("User", userSchema);
