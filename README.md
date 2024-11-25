@@ -10,12 +10,12 @@ The Kita-Info-App makes the communication between the kindergarten and the paren
 
 ### Demo
 
-You can find the hosted version on Vercel: [Demo Version](https://kita-info.vercel.app)
+You can find the hosted version on Vercel: [Demo Version of Kita-Info-App](https://kita-info.vercel.app)
 
 For testing, please use the following login-data:
 
     E-Mail: stern@gmx.de
-    Password: sternschnuppe
+    Passwort: sternschnuppe
 
 ### Technologies & Tools
 
@@ -26,9 +26,3 @@ For testing, please use the following login-data:
 - Styled Components
 
 - MongoDB
-
-### Local Development
-
-To work locally, please clone this repository to your local machine and install the dependencies using `npm i` first.
-
-Run `npm run dev` to start a development server and open the displayed URL in a browser.
