@@ -1,4 +1,4 @@
-import dbConnect from "@/db/dbConnect";
+import dbConnect from "../../../db/connect";
 import User from "@/db/models/User";
 
 export default async function handler(request, response) {
@@ -18,12 +18,12 @@ export default async function handler(request, response) {
   if (request.method === "POST") {
     user.querys.push(request.body.id);
     await user.save();
-    return response.status(200).json({ message: "User updated " });
+    return response.status(200).json({ message: "User updated" });
   }
 
   if (request.method === "PATCH") {
     user.querys.pull(request.body.id);
     await user.save();
-    return response.status(200).json({ message: "User updated " });
+    return response.status(200).json({ message: "User updated" });
   }
 }
