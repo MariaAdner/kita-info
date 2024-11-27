@@ -4,20 +4,18 @@ import clientPromise from "../../../db/mongodb";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import dbConnect from "../../../db/connect";
 import User from "../../../db/models/User";
-
 import { verifyPassword } from "../../../db/password";
-import { queries } from "@testing-library/react";
 
 export const authOptions = {
   adapter: MongoDBAdapter(clientPromise),
   session: {
     strategy: "jwt",
-    maxAge: 30 * 24 * 60 * 60, // 30 days
+    maxAge: 30 * 24 * 60 * 60,
   },
   secret: process.env.NEXTAUTH_SECRET,
   providers: [
     CredentialsProvider({
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         await dbConnect();
 
         if (credentials == null) return null;
@@ -56,34 +54,14 @@ export const authOptions = {
       return token;
     },
     async session({ session, token, user }) {
-      // await dbConnect();
-
-      // const currentUser = await User.findById(user.id);
-
-      // if (currentUser.queries == null) {
-      //   currentUser.queries = [];
-      //   currentUser.save();
-      // }
-
       if (token) {
         session.accessToken = token.accessToken;
         session.user.id = token.id;
-
-        try {
-          const updatedUser = await User.findById(token.id);
-          session.user = {
-            ...session.user,
-            ...updatedUser.toJSON(),
-          };
-        } catch (error) {
-          console.error("Failed to update session user details", error);
-        }
 
         return session;
       } else {
         return null;
       }
-      // return { ...session, user: { ...session.user, id: user.id } };
     },
   },
 };
