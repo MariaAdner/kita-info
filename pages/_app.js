@@ -1,7 +1,6 @@
 import { SWRConfig } from "swr";
 import GlobalStyle from "../styles";
 import Layout from "@/components/Layout";
-import Head from "next/head";
 import { SessionProvider } from "next-auth/react";
 import { AnimatePresence } from "framer-motion";
 
