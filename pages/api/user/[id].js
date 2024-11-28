@@ -3,27 +3,14 @@ import User from "@/db/models/User";
 
 export default async function handler(request, response) {
   await dbConnect();
-
   const { id } = request.query;
-  const user = await User.findById(id).populate("querys");
 
   if (request.method === "GET") {
+    const user = await User.findById(id).populate("queries");
+
     if (!user) {
-      return response.status(404).json({ message: "User not found" });
-    } else {
-      return response.status(200).json(user);
+      return response.status(404).json({ status: "User not found" });
     }
-  }
-
-  if (request.method === "POST") {
-    user.querys.push(request.body.id);
-    await user.save();
-    return response.status(200).json({ message: "User updated" });
-  }
-
-  if (request.method === "PATCH") {
-    user.querys.pull(request.body.id);
-    await user.save();
-    return response.status(200).json({ message: "User updated" });
+    response.status(200).json(user);
   }
 }
