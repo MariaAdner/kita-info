@@ -31,7 +31,12 @@ export const authOptions = {
               user.password
             );
             if (isValid) {
-              return user;
+              return {
+                name: user.name,
+                email: user.email,
+                id: user.id,
+                queries: user.queries,
+              };
             } else {
               throw new Error("Email or password is incorrect");
             }
@@ -49,6 +54,7 @@ export const authOptions = {
       if (user) {
         token.accessToken = user.access_token;
         token.id = user.id;
+        return { ...token, ...user };
       }
 
       return token;

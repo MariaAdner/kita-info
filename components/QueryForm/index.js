@@ -1,5 +1,6 @@
+import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
-import useSWR from "swr";
+import useSWR, { mutate } from "swr";
 import {
   StyledForm,
   StyledRadioButtonMenu,
@@ -7,32 +8,28 @@ import {
 } from "./queryform.styled";
 import { StyledButton } from "../Button/Button.styled";
 
-export default function QueryForm() {
-  const router = useRouter();
-  const { id } = router.query;
-
-  const { mutate } = useSWR(`/api/querys/${id}`);
-
+export default function QueryForm({ id }) {
   async function handleQuery(event) {
     event.preventDefault();
+
     const formData = new FormData(event.target);
     const queryData = Object.fromEntries(formData);
 
-    const response = await fetch(`/api/querys/${id}`, {
-      method: "PUT",
+    const response = await fetch(`/api/user/${id}/queries`, {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(queryData),
     });
-
-    if (response.ok) {
-      mutate();
-    }
-
-    router.push("/profile/thanks");
-    console.log(queryData);
   }
+
+  if (response.ok) {
+    mutate(`/api/user/${id}`);
+  }
+
+  router.push("/profile/thanks");
+  console.log(queryData);
 
   return (
     <>
