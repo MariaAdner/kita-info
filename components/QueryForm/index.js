@@ -8,28 +8,32 @@ import {
 } from "./queryform.styled";
 import { StyledButton } from "../Button/Button.styled";
 
-export default function QueryForm({ id }) {
+export default function QueryForm() {
+  const router = useRouter();
+  const { id } = router.query;
+
+  const { mutate } = useSWR(`/api/querys/${id}`);
+
   async function handleQuery(event) {
     event.preventDefault();
-
     const formData = new FormData(event.target);
     const queryData = Object.fromEntries(formData);
 
-    const response = await fetch(`/api/user/${id}/queries`, {
-      method: "POST",
+    const response = await fetch(`/api/querys/${id}`, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(queryData),
     });
-  }
 
-  if (response.ok) {
-    mutate(`/api/user/${id}`);
-  }
+    if (response.ok) {
+      mutate();
+    }
 
-  router.push("/profile/thanks");
-  console.log(queryData);
+    router.push("/profile/thanks");
+    console.log(queryData);
+  }
 
   return (
     <>

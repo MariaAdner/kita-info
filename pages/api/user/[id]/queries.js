@@ -1,6 +1,6 @@
 import dbConnect from "@/db/connect";
 import User from "@/db/models/User";
-import Query from "@/db/models/Query";
+import Query from "@/db/models/Survey";
 
 export default async function handler(request, response) {
   await dbConnect();

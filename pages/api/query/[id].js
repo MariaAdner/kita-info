@@ -1,4 +1,4 @@
-import Query from "@/db/models/Query";
+import Query from "@/db/models/Survey";
 import dbConnect from "@/db/connect";
 
 export default async function handler(request, response) {
@@ -7,12 +7,12 @@ export default async function handler(request, response) {
   const { id } = request.query;
 
   if ((request.method = "GET")) {
-    const querys = await Query.findById(id);
+    const query = await Query.findById(id);
 
-    if (!querys) {
+    if (!query) {
       return response.status(404).json({ status: "Not Found" });
     }
-    response.status(200).json(querys);
+    response.status(200).json(query);
   }
 
   // if (request.method === "POST") {

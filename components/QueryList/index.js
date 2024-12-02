@@ -2,7 +2,7 @@ import useSWR from "swr";
 import { StyledList, StyledLink, StyledTitle } from "../StyledList/list.styled";
 
 export default function QueryList() {
-  const { data: querys, isLoading } = useSWR("/api/querys");
+  const { data: querys, isLoading } = useSWR("/api/query");
 
   if (isLoading) {
     return <h1>Loading...</h1>;

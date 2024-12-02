@@ -2,12 +2,12 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const querySchema = new Schema({
+const surveySchema = new Schema({
   title: { type: String, required: true },
   text: { type: String, required: true },
   answer: { type: String, required: true },
 });
 
-const Query = mongoose.models.Query || mongoose.model("Query", querySchema);
+const Survey = mongoose.models.Survey || mongoose.model("Survey", surveySchema);
 
-export default Query;
+export default Survey;
