@@ -3,31 +3,31 @@ import useSWR from "swr";
 import { useSession } from "next-auth/react";
 import { Card, CardTitle, CardText } from "../Card/Card.styled";
 
-export default function QueryItem() {
+export default function SurveyItem() {
   const router = useRouter();
   const { id } = router.query;
 
   const { data: session } = useSession();
   // const userId = session.user.id;
 
-  const { data: query, isLoading } = useSWR(`/api/query/${id}`);
+  const { data: survey, isLoading } = useSWR(`/api/survey/${id}`);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
 
-  if (!query) {
+  if (!survey) {
     return;
   }
 
   return (
     <>
       <Card $variant="green">
-        <CardTitle>{query.title}</CardTitle>
-        <CardText dangerouslySetInnerHTML={{ __html: query.text }}></CardText>
-        {query.query !== " " && (
+        <CardTitle>{survey.title}</CardTitle>
+        <CardText dangerouslySetInnerHTML={{ __html: survey.text }}></CardText>
+        {survey.answer !== " " && (
           <CardText>
-            Sie haben sich bereits für <strong>{query.answer} </strong>
+            Sie haben sich bereits für <strong>{survey.answer} </strong>
             entschieden.
           </CardText>
         )}

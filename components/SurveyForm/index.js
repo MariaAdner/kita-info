@@ -8,23 +8,23 @@ import {
 } from "./queryform.styled";
 import { StyledButton } from "../Button/Button.styled";
 
-export default function QueryForm() {
+export default function SurveyForm() {
   const router = useRouter();
   const { id } = router.query;
 
-  const { mutate } = useSWR(`/api/querys/${id}`);
+  const { mutate } = useSWR(`/api/surveys/${id}`);
 
-  async function handleQuery(event) {
+  async function handleSurvey(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-    const queryData = Object.fromEntries(formData);
+    const surveyData = Object.fromEntries(formData);
 
-    const response = await fetch(`/api/querys/${id}`, {
+    const response = await fetch(`/api/surveys/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(queryData),
+      body: JSON.stringify(surveyData),
     });
 
     if (response.ok) {
@@ -32,12 +32,12 @@ export default function QueryForm() {
     }
 
     router.push("/profile/thanks");
-    console.log(queryData);
+    console.log(surveyData);
   }
 
   return (
     <>
-      <StyledForm onSubmit={handleQuery}>
+      <StyledForm onSubmit={handleSurvey}>
         <StyledRadioButtonMenu>
           <StyledRadioButton>
             <input type="radio" id="Ja" name="answer" value="Ja" />

@@ -1,22 +1,22 @@
 import useSWR from "swr";
 import { StyledList, StyledLink, StyledTitle } from "../StyledList/list.styled";
 
-export default function QueryList() {
-  const { data: querys, isLoading } = useSWR("/api/query");
+export default function SurveyList() {
+  const { data: querys, isLoading } = useSWR("/api/survey");
 
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
 
-  if (!querys) {
+  if (!surveys) {
     return;
   }
 
-  return querys.length ? (
+  return surveys.length ? (
     <StyledList>
-      {querys.map(({ _id, title }) => (
+      {surveys.map(({ _id, title }) => (
         <li key={_id}>
-          <StyledLink href={`/profile/query/${_id}`}>
+          <StyledLink href={`/profile/survey/${_id}`}>
             <StyledTitle>{title}</StyledTitle>
           </StyledLink>
         </li>

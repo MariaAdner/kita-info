@@ -2,7 +2,7 @@ import useSWR from "swr";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 
-export default function UserQuery() {
+export default function UserSurvey() {
   const { data: session } = useSession();
 
   //   if (isLoading) {
